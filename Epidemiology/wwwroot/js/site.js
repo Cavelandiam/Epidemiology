@@ -1,4 +1,8 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
+﻿$(document).ready(function () {
+    $("input[type='number']").on("change", function () {
+        let num = $(this).val();
+        if (!num.match(/^\d+/)) {
+            $(this).val(1);
+        }
+    });
+});
