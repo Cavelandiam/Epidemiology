@@ -1,20 +1,12 @@
 html {
-  font-size: 12px;
-}
-
-@media (min-width: 768px) {
-  html {
+    position: relative;
+    min-height: 100%;
     font-size: 14px;
-  }
-}
-
-html {
-  position: relative;
-  min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background: #D4D4D4;
 }
 
 th.tittle-one {
@@ -32,4 +24,68 @@ input.in-text {
 table.content-data {
     vertical-align: middle;
     text-align: center;
+}
+
+.wrap {
+    
+}
+
+ul.tabs {
+    width: 100%;
+    background: #363636;
+    list-style: none;
+    display: flex;
+    margin-bottom: 0px;
+}
+
+    ul.tabs li {
+        width: 20%;        
+    }
+
+        ul.tabs li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            text-align: center;
+            display: block;
+            padding: 20px 0px;
+        }
+
+            ul.tabs li a .tab-text {
+                margin-left: 8px;
+            }
+
+.active {
+    background: #0984CC;
+}
+
+.secciones{
+    width: 100%;
+    background: #f7eded;
+}
+
+.secciones article{
+    padding: 20px;
+}
+
+    .secciones article  p{
+        text-align: justify;
+    }
+
+@media screen and (max-width: 768px){
+    ul.tabs li {
+        width: none;
+        flex-basis: 0;
+        flex-grow: 1;
+        margin-left: 0px;
+    }
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    ul.tabs li a{
+        padding: 15px 0px;
+    }
 }
