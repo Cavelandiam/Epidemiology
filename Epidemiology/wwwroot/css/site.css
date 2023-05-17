@@ -26,20 +26,19 @@ table.content-data {
     text-align: center;
 }
 
-.wrap {
-    
-}
-
 ul.tabs {
     width: 100%;
-    background: #363636;
     list-style: none;
     display: flex;
-    margin-bottom: 0px;
+    justify-content: space-around;
 }
 
+    ul.tabs li:hover {
+        background-color: #0984CC;
+    }
+
     ul.tabs li {
-        width: 20%;        
+        width: 30%;
     }
 
         ul.tabs li a {
@@ -48,44 +47,76 @@ ul.tabs {
             font-size: 14px;
             text-align: center;
             display: block;
-            padding: 20px 0px;
+            padding: 10px 30px;
         }
 
             ul.tabs li a .tab-text {
-                margin-left: 8px;
+                margin-left: 9px;
             }
 
 .active {
     background: #0984CC;
 }
 
-.secciones{
+ul.menu-vertical {
+    width: 200px;
+    list-style: none;
+    display: none;
+    position: absolute;
+    background-color: black;
+}
+
+ul.tabs li:hover ul.menu-vertical {
+    display: block;
+}
+
+ul .menu-vertical li {
+    width: max-content;
+}
+
+    ul .menu-vertical li:hover {
+        background-color: #0984CC;
+    }
+
+    ul .menu-vertical li a {
+        color: white;
+        display: block;
+        text-decoration: none;
+        padding: 15px 15px 15px 20px;
+    }
+
+ul menu-vertical li a .tab-text {
+    margin-left: 3px;
+}
+
+.secciones {
     width: 100%;
     background: #f7eded;
 }
 
-.secciones article{
-    padding: 20px;
-}
-
-    .secciones article  p{
-        text-align: justify;
+    .secciones article {
+        padding: 20px;
     }
 
-@media screen and (max-width: 768px){
+        .secciones article p {
+            text-align: justify;
+        }
+
+@media screen and (max-width: 768px) {
     ul.tabs li {
         width: none;
         flex-basis: 0;
         flex-grow: 1;
         margin-left: 0px;
     }
+
     html {
         font-size: 14px;
     }
 }
 
 @media screen and (max-width: 530px) {
-    ul.tabs li a{
+    ul.tabs li a {
         padding: 15px 0px;
     }
 }

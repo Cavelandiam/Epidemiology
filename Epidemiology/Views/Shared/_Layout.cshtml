@@ -12,14 +12,26 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-black border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Epidemiology</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
+                <ul class="tabs">
+                    <li>
+                        <a href="#"><span class="fa fa-bacteria"></span><span class="tab-text">Información de cultivo</span></a>
+                        <ul class="menu-vertical">
+                            <li><a href="#tab1"><span class="fa fa-bacterium"></span><span class="tab-text">Convencional</span></a></li>
+                            <li><a href="#tab2"><span class="fa fa-bacterium"></span><span class="tab-text">PCR</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#tab3"><span class="fa fa-home"></span><span class="tab-text">Información Medio de cultivo</span></a></li>
+                    <li><a href="#tab4"><span class="fa fa-home"></span><span class="tab-text">Talento Humano por cultivo</span></a></li>
+                    <li><a href="#tab5"><span class="fa fa-home"></span><span class="tab-text">Actividades</span></a></li>
+                </ul>
             </div>
         </nav>
     </header>

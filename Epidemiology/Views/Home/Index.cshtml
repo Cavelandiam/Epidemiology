@@ -2,1178 +2,1171 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="wrap">
-    <ul class="tabs">
-        <li><a href="#tab1"><span class="fa fa-home"></span><span class="tab-text">Información de cultivo</span></a></li>
-        <li><a href="#tab5"><span class="fa fa-home"></span><span class="tab-text">PCR</span></a></li>
-        <li><a href="#tab2"><span class="fa fa-home"></span><span class="tab-text">Información Medio de cultivo</span></a></li>
-        <li><a href="#tab3"><span class="fa fa-home"></span><span class="tab-text">Talento Humano por cultivo</span></a></li>
-        <li><a href="#tab4"><span class="fa fa-home"></span><span class="tab-text">Actividades</span></a></li>
-    </ul>
 
-    <div class="secciones">
-        <article id="tab1">
-            <div class="div-info-cultivo">
-                <div class="table-responsive">
-                    <table class="table text-center content-data">
-                        <thead>
-                            <tr>
-                                <th colspan="4" class="tittle-one">CULTIVO SALMONELLA / LISTERIA</th>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one"></th>
-                                <th class="tittle-one">CULTIVO</th>
-                                <th class="tittle-one">PRECIO POR CULTIVO</th>
-                                <th class="tittle-one">TOTAL COSTO MES</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th class="tittle-one" scope="row">CULTIVO LISTERIA</th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td>$ 0</td>
-                                <td>$ 0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">CULTIVO SALMONELA</th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td>$ 0</td>
-                                <td>$ 0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
 
-                <div class="table-responsive">
-                    <table class="table text-center content-data">
-                        <thead>
-                            <tr>
-                                <th class="tittle-one"></th>
-                                <th colspan="2" class="tittle-one">LISTERIA</th>
-                                <th colspan="2" class="tittle-one">SALMONELA</th>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one"></th>
-                                <th class="tittle-one">BACT</th>
-                                <th class="tittle-one">AUX</th>
-                                <th class="tittle-one">BACT</th>
-                                <th class="tittle-one">AUX</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th class="tittle-one" scope="row">Tiem. Dispon. Diario. Minutos</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Resto Tiem. Disponible</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Tiempo utilizado</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="table-responsive">
-                    <table class="table text-center content-data">
-                        <tbody>
-                            <tr>
-                                <th class="tittle-one" scope="row">MEDIOS EFICIENTES LISTERIA</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">MEDIOS NO EFICIENTES LISTERIA</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">MEDIOS EFICIENTES SALMONELLA</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">MEDIOS NO EFICIENTES SALMONELLA</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="table-responsive">
-                    <table class="table text-center content-data">
-                        <tbody>
-                            <tr>
-                                <td>Volumen muerto Preparacion Listeria</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Volumen muerto Preparacion  Salmonella</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Valor total de desperdicio</th>
-                                <td></td>
-                                <td></td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+<div class="secciones">
+    <article id="tab1">
+        <div class="div-info-cultivo-convencional">
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <thead>
+                        <tr>
+                            <th colspan="4" class="tittle-one">CULTIVO SALMONELLA / LISTERIA</th>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one"></th>
+                            <th class="tittle-one">CULTIVO</th>
+                            <th class="tittle-one">PRECIO POR CULTIVO</th>
+                            <th class="tittle-one">TOTAL COSTO MES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="tittle-one" scope="row">CULTIVO LISTERIA</th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td>$ 0</td>
+                            <td>$ 0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">CULTIVO SALMONELA</th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td>$ 0</td>
+                            <td>$ 0</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </article>
-        <article id="tab2">
-            <div class="div-medio-cultivo">
-                <div class="table-responsive">
-                    <table class="table text-center content-data">
-                        <thead>
-                            <tr>
-                                <th colspan="13" class="tittle-one">MEDIO DE CULTIVO SALMONELLA</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th class="tittle-one" scope="row">NOMBRE</th>
-                                <td>AGUA PEPTONADA </td>
-                                <td>CALDO RAPPAPORT</td>
-                                <td>AGAR XLD</td>
-                                <td>AGAR SALMONELLA PLUS</td>
-                                <td>TSI</td>
-                                <td>LIA</td>
-                                <td>MIO</td>
-                                <td>UREA</td>
-                                <td>UREA SOLUCION</td>
-                                <td>VP</td>
-                                <td>ONPG</td>
-                                <td>TOTAL</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Presentacion gr</th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Rendimiento</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Número de medios</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Reactivo necesario x presentacion Unidad</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Gramos por prueba</th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Valor comercial</th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Porcentaje de contaminacion teorica</th>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Porcentaje de volumen muerto</th>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Valor cultivo</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Valor caja/tubo </th>
-                                <td></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Cantidad caja/tubo requerido</th>
-                                <td></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Valor total cultivo </th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Cantidad pruebas por preparacion </th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
 
-                <div class="table-responsive">
-                    <table class="table text-center content-data">
-                        <thead>
-                            <tr>
-                                <th colspan="13" class="tittle-one">MEDIO DE CULTIVO LISTERIA</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th class="tittle-one" scope="row">NOMBRE</th>
-                                <td>CALDO FRASER</td>
-                                <td>SUPLEMENTO (06-112 + 06-111)</td>
-                                <td>SEGUNDO CALDO ENREQUECIMIENTO</td>
-                                <td>SUPLEMENTO ( 06-111)</td>
-                                <td>LISTERIA SELECTIVE AGAR (OXFORD FORMULATION)(CM0856)</td>
-                                <td>LISTERIA SELECTIVE SUPPLEMENT (OXFORD FORMULATION)</td>
-                                <td>CATALASA</td>
-                                <td>OXIDASA</td>
-                                <td>O/F</td>
-                                <td>TOTAL</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Presentacion gr/L</th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Numero de medios por presentacion</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Numero de medios Usados</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Reactivo necesario x presentacion Unidad</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Gramos por prueba</th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Valor comercial</th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Porcentaje de contaminacion teorica</th>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Porcentaje de volumen muerto</th>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Valor cultivo</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Valor caja/tubo </th>
-                                <td></td>
-                                <td></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Cantidad caja/tubo requerido</th>
-                                <td></td>
-                                <td></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Valor total cultivo </th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Cantidad pruebas por preparacion </th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="table-responsive">
-                    <table class="table text-center content-data">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th colspan="2" class="tittle-one">LISTERIA (SUPERFICIES)</th>
-                                <th colspan="2" class="tittle-one">SALMONELLA (SUPERFICIES)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th class="tittle-one" scope="row">NOMBRE</th>
-                                <td>MEMP Swabbing Kit</td>
-                                <td>MEMP Listeria Detection Kit</td>
-                                <td>MEMP Swabbing Kit</td>
-                                <td>MEMP Salmonella Detection Kit</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">PRESENTACION x kit</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">VALOR KIT</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th rowspan="2" class="tittle-one" scope="row">VALOR PRUEBA</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">0</td>
-                                <td colspan="2">0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="table-responsive">
-                    <table class="table text-center content-data">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th colspan="2" class="tittle-one">LISTERIA (PRODUCTO TERMINADO)</th>
-                                <th colspan="2" class="tittle-one">SALMONELLA  (PRODUCTO TERMINADO)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th class="tittle-one" scope="row">NOMBRE</th>
-                                <td>Listeria Recovery and Enrichment Broth (LREB)</td>
-                                <td>SIMUL-qPCR Listeria species & Monocytogenes Kit</td>
-                                <td>Buffered Peptone Water (BPW)</td>
-                                <td>SIMUL-qPCR Salmonella species Kit</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">NÚMERO DE PRUEBAS</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">VALOR KIT</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th rowspan="2" class="tittle-one" scope="row">VALOR PRUEBA</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">0</td>
-                                <td colspan="2">0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <thead>
+                        <tr>
+                            <th class="tittle-one"></th>
+                            <th colspan="2" class="tittle-one">LISTERIA</th>
+                            <th colspan="2" class="tittle-one">SALMONELA</th>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one"></th>
+                            <th class="tittle-one">BACT</th>
+                            <th class="tittle-one">AUX</th>
+                            <th class="tittle-one">BACT</th>
+                            <th class="tittle-one">AUX</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="tittle-one" scope="row">Tiem. Dispon. Diario. Minutos</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Resto Tiem. Disponible</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Tiempo utilizado</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </article>
-        <article id="tab3">
-            <div class="div-info-talento-humano-cultivo">
-                <div class="table-responsive">
-                    <table class="table text-center content-data">
-                        <thead>
-                            <tr>                                
-                                <th colspan="3" class="tittle-one">LISTERIA</th>                                
-                            </tr>
-                            <tr>
-                                <th class="tittle-one">TALENTO HUMANO</th>
-                                <th class="tittle-one">MICROBIOLOGIA CONVENCIONAL</th>
-                                <th class="tittle-one">PCR</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>Nomina Bacteriologo</th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <th>Lead time por prueba (bacteriologo)</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Valor Bacteriologo por minuto</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Costo del tiempo de procesamiento por test</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Nomina Auxiliar</th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <th>Lead time por prueba (Auxiliar))</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Valor Auxiliar  por minuto</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Costo del tiempo de procesamiento por test </th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
 
-                <div class="table-responsive">
-                    <table class="table text-center content-data">
-                        <thead>
-                            <tr>
-                                <th colspan="3" class="tittle-one">SALMONELLA</th>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one">TALENTO HUMANO</th>
-                                <th class="tittle-one">MICROBIOLOGIA CONVENCIONAL</th>
-                                <th class="tittle-one">PCR</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>Nomina Bacteriologo</th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <th>Lead time por prueba (bacteriologo)</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Valor Bacteriologo por minuto</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Costo del tiempo de procesamiento por test</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Nomina Auxiliar</th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <th>Lead time por prueba (Auxiliar))</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Valor Auxiliar  por minuto</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Costo del tiempo de procesamiento por test </th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="table-responsive">
-                    <table class="table text-center content-data">
-                        <thead>                            
-                            <tr>
-                                <th colspan="2" class="tittle-one">MICROBIOLOGIA CONVENCIONAL</th>
-                                <th colspan="2" class="tittle-one">PCR</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Sueldo Bacteriologo X Turno</td>
-                                <td>0</td>
-                                <td>Sueldo Bacteriologo X Turno</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>Minutos por turno</td>
-                                <td>0</td>
-                                <td>Minutos por turno</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>Cantidad de cultivos</td>
-                                <td>0</td>
-                                <td>Cantidad de PCR</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>Sueldo Auxiliar X Turno</td>
-                                <td>0</td>
-                                <td>Sueldo Auxiliar X Turno</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>Minutos por turno</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td>Minutos por turno</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <td>Cantidad de cultivos</td>
-                                <td>0</td>
-                                <td>Cantidad de PCR</td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <tbody>
+                        <tr>
+                            <th class="tittle-one" scope="row">MEDIOS EFICIENTES LISTERIA</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">MEDIOS NO EFICIENTES LISTERIA</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">MEDIOS EFICIENTES SALMONELLA</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">MEDIOS NO EFICIENTES SALMONELLA</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </article>
-        <article id="tab4">
-            <div class="div-info-actividades-cultivo">
-                <div class="table-responsive">
-                    <table class="table text-center content-data">
-                        <thead>                            
-                            <tr>
-                                <th class="tittle-one">Actividades microbiologia convencional</th>
-                                <th class="tittle-one">Tiempo (Min)</th>
-                                <th class="tittle-one">Actividades PCR</th>
-                                <th class="tittle-one">Tiempo (Min)</th>
-                            </tr>
-                            <tr>
-                                <th colspan="4" class="tittle-one">LISTERIA</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Alistamiento de materiales para preparación</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td>Alistamiento</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <td>Pesar acorde con lo estipulado para cada cultivo</td>
-                                <td>traer de otra</td>
-                                <td>Muestra y enriquecimiento LREB</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>     
-                            <tr>
-                                <td>Suspender medio de cultivo y diluir</td>
-                                <td>traer de otra</td>
-                                <td>Lisis de la muestra</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <td>Reposar y mezclar hasta uniformar</td>
-                                <td>traer de otra</td>
-                                <td>Configurar ensayo SIMUL-qPCR</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <td>Calentar agitando</td>
-                                <td>traer de otra</td>
-                                <td>Revisar el ensayo SIMUL-qPCR</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <td>Distribuir en placa o tubo</td>
-                                <td>traer de otra</td>
-                                <td>Total</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>Esterilizar en autoclave</td>
-                                <td>traer de otra</td>
-                                <td>Montaje Listeria superficies</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <td>Control de esterilidad</td>
-                                <td>traer de otra</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Control de  selectividad</td>
-                                <td>traer de otra</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Control de productividad</td>
-                                <td>traer de otra</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Siembra</td>
-                                <td>traer de otra</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Incubación</td>
-                                <td>traer de otra</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Lecturas</td>
-                                <td>traer de otra</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Confirmación colonias sospechosas</td>
-                                <td>traer de otra</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Total</td>
-                                <td>0</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th colspan="4" class="tittle-one">SALMONELLA</th>
-                            </tr>
-                            <tr>
-                                <td>Alistamiento de materiales para preparación</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td>Alistamiento</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <td>Pesar acorde con lo estipulado para cada cultivo</td>
-                                <td>traer de otra</td>
-                                <td>Muestra y enriquecimiento EREB Enriquecimiento BPW</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <td>Suspender medio de cultivo y diluir</td>
-                                <td>traer de otra</td>
-                                <td>Lisis de la muestra</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <td>Reposar y mezclar hasta uniformar</td>
-                                <td>traer de otra</td>
-                                <td>Configurar ensayo SIMUL-qPCR</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <td>Calentar agitando</td>
-                                <td>traer de otra</td>
-                                <td>Revisar el ensayo SIMUL-qPCR</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <td>Distribuir en placa o tubo</td>
-                                <td>traer de otra</td>
-                                <td>Total</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <td>Esterilizar en autoclave</td>
-                                <td>traer de otra</td>
-                                <td>Montaje Salmonella superficies</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                            </tr>
-                            <tr>
-                                <td>Control de esterilidad</td>
-                                <td>traer de otra</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Control de  selectividad</td>
-                                <td>traer de otra</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Control de productividad</td>
-                                <td>traer de otra</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Siembra</td>
-                                <td>traer de otra</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Incubación</td>
-                                <td>traer de otra</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Lecturas</td>
-                                <td>traer de otra</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Confirmación colonias sospechosas</td>
-                                <td>traer de otra</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Total</td>
-                                <td>0</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <tbody>
+                        <tr>
+                            <td>Volumen muerto Preparacion Listeria</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Volumen muerto Preparacion  Salmonella</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Valor total de desperdicio</th>
+                            <td></td>
+                            <td></td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </article>
-        <article id="tab5">
-            <div class="div-info-cultivo-pcr">
-                <div class="table-responsive">
-                    <table class="table text-center content-data">
-                        <thead>
-                            <tr>
-                                <th class="tittle-one">PCR</th>
-                                <th colspan="3" class="tittle-one">PRECIO qPCR PRODUCTO PREPARADO</th>
-                                <th colspan="3" class="tittle-one">PRECIO PCR SUPERFICIE</th>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one"></th>
-                                <th class="tittle-one">PCR</th>
-                                <th class="tittle-one">PRECIO POR PCR</th>
-                                <th class="tittle-one">TOTAL COSTO MES</th>
-                                <th class="tittle-one">PCR</th>
-                                <th class="tittle-one">PRECIO POR PCR</th>
-                                <th class="tittle-one">TOTAL COSTO MES</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th class="tittle-one" scope="row">PCR LISTERIA</th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">PCR SALMONELA</th>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="table-responsive">
-                    <table class="table text-center content-data">
-                        <thead>
-                            <tr>
-                                <th class="tittle-one"></th>
-                                <th colspan="2" class="tittle-one">LISTERIA</th>
-                                <th colspan="2" class="tittle-one">SALMONELA</th>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one"></th>
-                                <th class="tittle-one">BACT</th>
-                                <th class="tittle-one">AUX</th>
-                                <th class="tittle-one">BACT</th>
-                                <th class="tittle-one">AUX</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th class="tittle-one" scope="row">Tiem. Dispon. Diario. Minutos</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Resto Tiem. Disponible</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">Tiempo utilizado</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="table-responsive">
-                    <table class="table text-center content-data">                        
-                        <tbody>
-                            <tr>
-                                <th class="tittle-one" scope="row">MEDIOS EFICIENTES LISTERIA</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">MEDIOS NO EFICIENTES LISTERIA</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">MEDIOS EFICIENTES SALMONELLA</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th class="tittle-one" scope="row">MEDIOS NO EFICIENTES SALMONELLA</th>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="table-responsive">
-                    <table class="table text-center content-data">
-                        <thead>
-                            <tr>
-                                <th class="tittle-one"></th>
-                                <th colspan="3" class="tittle-one">PRODUCTO PREPARADO</th>
-                                <th colspan="3" class="tittle-one">SUPERFICIE</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Volumen muerto Preparacion Listeria</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Volumen muerto Preparacion  Salmonella</th>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Valor total de desperdicio</th>
-                                <td></td>
-                                <td></td>
-                                <td>0</td>
-                                <td></td>
-                                <td></td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+        </div>
+    </article>
+    <article id="tab2">
+        <div class="div-info-cultivo-pcr">
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <thead>
+                        <tr>
+                            <th class="tittle-one">PCR</th>
+                            <th colspan="3" class="tittle-one">PRECIO qPCR PRODUCTO PREPARADO</th>
+                            <th colspan="3" class="tittle-one">PRECIO PCR SUPERFICIE</th>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one"></th>
+                            <th class="tittle-one">PCR</th>
+                            <th class="tittle-one">PRECIO POR PCR</th>
+                            <th class="tittle-one">TOTAL COSTO MES</th>
+                            <th class="tittle-one">PCR</th>
+                            <th class="tittle-one">PRECIO POR PCR</th>
+                            <th class="tittle-one">TOTAL COSTO MES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="tittle-one" scope="row">PCR LISTERIA</th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">PCR SALMONELA</th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </article>
-    </div>
+
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <thead>
+                        <tr>
+                            <th class="tittle-one"></th>
+                            <th colspan="2" class="tittle-one">LISTERIA</th>
+                            <th colspan="2" class="tittle-one">SALMONELA</th>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one"></th>
+                            <th class="tittle-one">BACT</th>
+                            <th class="tittle-one">AUX</th>
+                            <th class="tittle-one">BACT</th>
+                            <th class="tittle-one">AUX</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="tittle-one" scope="row">Tiem. Dispon. Diario. Minutos</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Resto Tiem. Disponible</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Tiempo utilizado</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <tbody>
+                        <tr>
+                            <th class="tittle-one" scope="row">MEDIOS EFICIENTES LISTERIA</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">MEDIOS NO EFICIENTES LISTERIA</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">MEDIOS EFICIENTES SALMONELLA</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">MEDIOS NO EFICIENTES SALMONELLA</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <thead>
+                        <tr>
+                            <th class="tittle-one"></th>
+                            <th colspan="3" class="tittle-one">PRODUCTO PREPARADO</th>
+                            <th colspan="3" class="tittle-one">SUPERFICIE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Volumen muerto Preparacion Listeria</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Volumen muerto Preparacion  Salmonella</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Valor total de desperdicio</th>
+                            <td></td>
+                            <td></td>
+                            <td>0</td>
+                            <td></td>
+                            <td></td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </article>
+    <article id="tab3">
+        <div class="div-medio-cultivo">
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <thead>
+                        <tr>
+                            <th colspan="13" class="tittle-one">MEDIO DE CULTIVO SALMONELLA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="tittle-one" scope="row">NOMBRE</th>
+                            <td>AGUA PEPTONADA </td>
+                            <td>CALDO RAPPAPORT</td>
+                            <td>AGAR XLD</td>
+                            <td>AGAR SALMONELLA PLUS</td>
+                            <td>TSI</td>
+                            <td>LIA</td>
+                            <td>MIO</td>
+                            <td>UREA</td>
+                            <td>UREA SOLUCION</td>
+                            <td>VP</td>
+                            <td>ONPG</td>
+                            <td>TOTAL</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Presentacion gr</th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Rendimiento</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Número de medios</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Reactivo necesario x presentacion Unidad</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Gramos por prueba</th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Valor comercial</th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Porcentaje de contaminacion teorica</th>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Porcentaje de volumen muerto</th>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Valor cultivo</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Valor caja/tubo </th>
+                            <td></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Cantidad caja/tubo requerido</th>
+                            <td></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Valor total cultivo </th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Cantidad pruebas por preparacion </th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <thead>
+                        <tr>
+                            <th colspan="13" class="tittle-one">MEDIO DE CULTIVO LISTERIA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="tittle-one" scope="row">NOMBRE</th>
+                            <td>CALDO FRASER</td>
+                            <td>SUPLEMENTO (06-112 + 06-111)</td>
+                            <td>SEGUNDO CALDO ENREQUECIMIENTO</td>
+                            <td>SUPLEMENTO ( 06-111)</td>
+                            <td>LISTERIA SELECTIVE AGAR (OXFORD FORMULATION)(CM0856)</td>
+                            <td>LISTERIA SELECTIVE SUPPLEMENT (OXFORD FORMULATION)</td>
+                            <td>CATALASA</td>
+                            <td>OXIDASA</td>
+                            <td>O/F</td>
+                            <td>TOTAL</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Presentacion gr/L</th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Numero de medios por presentacion</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Numero de medios Usados</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Reactivo necesario x presentacion Unidad</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Gramos por prueba</th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Valor comercial</th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Porcentaje de contaminacion teorica</th>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Porcentaje de volumen muerto</th>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Valor cultivo</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Valor caja/tubo </th>
+                            <td></td>
+                            <td></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Cantidad caja/tubo requerido</th>
+                            <td></td>
+                            <td></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Valor total cultivo </th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">Cantidad pruebas por preparacion </th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th colspan="2" class="tittle-one">LISTERIA (SUPERFICIES)</th>
+                            <th colspan="2" class="tittle-one">SALMONELLA (SUPERFICIES)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="tittle-one" scope="row">NOMBRE</th>
+                            <td>MEMP Swabbing Kit</td>
+                            <td>MEMP Listeria Detection Kit</td>
+                            <td>MEMP Swabbing Kit</td>
+                            <td>MEMP Salmonella Detection Kit</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">PRESENTACION x kit</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">VALOR KIT</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="tittle-one" scope="row">VALOR PRUEBA</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">0</td>
+                            <td colspan="2">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th colspan="2" class="tittle-one">LISTERIA (PRODUCTO TERMINADO)</th>
+                            <th colspan="2" class="tittle-one">SALMONELLA  (PRODUCTO TERMINADO)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="tittle-one" scope="row">NOMBRE</th>
+                            <td>Listeria Recovery and Enrichment Broth (LREB)</td>
+                            <td>SIMUL-qPCR Listeria species & Monocytogenes Kit</td>
+                            <td>Buffered Peptone Water (BPW)</td>
+                            <td>SIMUL-qPCR Salmonella species Kit</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">NÚMERO DE PRUEBAS</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one" scope="row">VALOR KIT</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="tittle-one" scope="row">VALOR PRUEBA</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">0</td>
+                            <td colspan="2">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </article>
+    <article id="tab4">
+        <div class="div-info-talento-humano-cultivo">
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <thead>
+                        <tr>
+                            <th colspan="3" class="tittle-one">LISTERIA</th>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one">TALENTO HUMANO</th>
+                            <th class="tittle-one">MICROBIOLOGIA CONVENCIONAL</th>
+                            <th class="tittle-one">PCR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Nomina Bacteriologo</th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <th>Lead time por prueba (bacteriologo)</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Valor Bacteriologo por minuto</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Costo del tiempo de procesamiento por test</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Nomina Auxiliar</th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <th>Lead time por prueba (Auxiliar))</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Valor Auxiliar  por minuto</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Costo del tiempo de procesamiento por test </th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <thead>
+                        <tr>
+                            <th colspan="3" class="tittle-one">SALMONELLA</th>
+                        </tr>
+                        <tr>
+                            <th class="tittle-one">TALENTO HUMANO</th>
+                            <th class="tittle-one">MICROBIOLOGIA CONVENCIONAL</th>
+                            <th class="tittle-one">PCR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Nomina Bacteriologo</th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <th>Lead time por prueba (bacteriologo)</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Valor Bacteriologo por minuto</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Costo del tiempo de procesamiento por test</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Nomina Auxiliar</th>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <th>Lead time por prueba (Auxiliar))</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Valor Auxiliar  por minuto</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Costo del tiempo de procesamiento por test </th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="tittle-one">MICROBIOLOGIA CONVENCIONAL</th>
+                            <th colspan="2" class="tittle-one">PCR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sueldo Bacteriologo X Turno</td>
+                            <td>0</td>
+                            <td>Sueldo Bacteriologo X Turno</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Minutos por turno</td>
+                            <td>0</td>
+                            <td>Minutos por turno</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Cantidad de cultivos</td>
+                            <td>0</td>
+                            <td>Cantidad de PCR</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Sueldo Auxiliar X Turno</td>
+                            <td>0</td>
+                            <td>Sueldo Auxiliar X Turno</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Minutos por turno</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td>Minutos por turno</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <td>Cantidad de cultivos</td>
+                            <td>0</td>
+                            <td>Cantidad de PCR</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </article>
+    <article id="tab5">
+        <div class="div-info-actividades-cultivo">
+            <div class="table-responsive">
+                <table class="table text-center content-data">
+                    <thead>
+                        <tr>
+                            <th class="tittle-one">Actividades microbiologia convencional</th>
+                            <th class="tittle-one">Tiempo (Min)</th>
+                            <th class="tittle-one">Actividades PCR</th>
+                            <th class="tittle-one">Tiempo (Min)</th>
+                        </tr>
+                        <tr>
+                            <th colspan="4" class="tittle-one">LISTERIA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alistamiento de materiales para preparación</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td>Alistamiento</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <td>Pesar acorde con lo estipulado para cada cultivo</td>
+                            <td>traer de otra</td>
+                            <td>Muestra y enriquecimiento LREB</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <td>Suspender medio de cultivo y diluir</td>
+                            <td>traer de otra</td>
+                            <td>Lisis de la muestra</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <td>Reposar y mezclar hasta uniformar</td>
+                            <td>traer de otra</td>
+                            <td>Configurar ensayo SIMUL-qPCR</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <td>Calentar agitando</td>
+                            <td>traer de otra</td>
+                            <td>Revisar el ensayo SIMUL-qPCR</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <td>Distribuir en placa o tubo</td>
+                            <td>traer de otra</td>
+                            <td>Total</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Esterilizar en autoclave</td>
+                            <td>traer de otra</td>
+                            <td>Montaje Listeria superficies</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <td>Control de esterilidad</td>
+                            <td>traer de otra</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Control de  selectividad</td>
+                            <td>traer de otra</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Control de productividad</td>
+                            <td>traer de otra</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Siembra</td>
+                            <td>traer de otra</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Incubación</td>
+                            <td>traer de otra</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Lecturas</td>
+                            <td>traer de otra</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Confirmación colonias sospechosas</td>
+                            <td>traer de otra</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>0</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th colspan="4" class="tittle-one">SALMONELLA</th>
+                        </tr>
+                        <tr>
+                            <td>Alistamiento de materiales para preparación</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                            <td>Alistamiento</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <td>Pesar acorde con lo estipulado para cada cultivo</td>
+                            <td>traer de otra</td>
+                            <td>Muestra y enriquecimiento EREB Enriquecimiento BPW</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <td>Suspender medio de cultivo y diluir</td>
+                            <td>traer de otra</td>
+                            <td>Lisis de la muestra</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <td>Reposar y mezclar hasta uniformar</td>
+                            <td>traer de otra</td>
+                            <td>Configurar ensayo SIMUL-qPCR</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <td>Calentar agitando</td>
+                            <td>traer de otra</td>
+                            <td>Revisar el ensayo SIMUL-qPCR</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <td>Distribuir en placa o tubo</td>
+                            <td>traer de otra</td>
+                            <td>Total</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <td>Esterilizar en autoclave</td>
+                            <td>traer de otra</td>
+                            <td>Montaje Salmonella superficies</td>
+                            <td><input class="in-text only-numbers-in" type="number" min="1" value="1" /></td>
+                        </tr>
+                        <tr>
+                            <td>Control de esterilidad</td>
+                            <td>traer de otra</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Control de  selectividad</td>
+                            <td>traer de otra</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Control de productividad</td>
+                            <td>traer de otra</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Siembra</td>
+                            <td>traer de otra</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Incubación</td>
+                            <td>traer de otra</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Lecturas</td>
+                            <td>traer de otra</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Confirmación colonias sospechosas</td>
+                            <td>traer de otra</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>0</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </article>
+    
 </div>
 
