@@ -9,28 +9,48 @@
 
 function calcularTiempoDensidadPruebasTbl8() {
     var fila1Valores = [];
+    var totalColumnas = [0,0,0,0,0,0,0,0,0,0,0,0,0];
     $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:first-child td:gt(0):lt(11)').each(function () {
         fila1Valores.push($(this).find('input').val());
     });
-    $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:gt(0):lt(5)').each(function () {
+    $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:gt(0):lt(4)').each(function () {
         var filaActual = $(this);
-        var initialCell = filaActual.find("td:gt(0) input").val();
+        var initialCell = parseFloat(filaActual.find("td:gt(0) input").val());
+        totalColumnas[0] = totalColumnas[0] + parseFloat(initialCell);
+        cont = 1;
+        var sumaTotal = 0;
         filaActual.find("td:gt(1):lt(11)").each(function (index) {
-            if ($(this).text() != '') {
-                $(this).text((initialCell / fila1Valores[index]).toFixed(3));
-            } 
-
-        });
-    });
-    $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:gt(4):lt(13)').each(function () {
-        var filaActual = $(this);
-        var initialCell = filaActual.find("td:gt(0) input").val();
-        filaActual.find("td:gt(1):lt(11)").each(function () {
-            if ($(this).text() != '') {
-                $(this).text((initialCell));
+            var dataValue = $(this).text();
+            if (dataValue != '') {
+                $(this).text((initialCell / parseFloat(fila1Valores[index])).toFixed(3));
+                sumaTotal += parseFloat($(this).text());
+                totalColumnas[cont] = totalColumnas[cont] + parseFloat($(this).text());                
             }
-
+            cont++;
         });
+        filaActual.find("td:last").text(sumaTotal.toFixed(3));
+        totalColumnas[totalColumnas.length - 1] = totalColumnas[totalColumnas.length - 1] + parseFloat(filaActual.find("td:last").text());
+    });
+    $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:gt(4):lt(9)').each(function () {
+        var filaActual = $(this);
+        var initialCell = parseFloat(filaActual.find("td:gt(0) input").val());
+        totalColumnas[0] = totalColumnas[0] + parseFloat(initialCell);
+        cont = 1;
+        var sumaTotal = 0;
+        filaActual.find("td:gt(1):lt(11)").each(function () {
+            var dataValue = $(this).text();
+            if (dataValue != '') {
+                $(this).text((initialCell));
+                sumaTotal += parseFloat($(this).text());
+                totalColumnas[cont] = totalColumnas[cont] + parseFloat($(this).text());                
+            }
+            cont++;
+        });
+        filaActual.find("td:last").text(sumaTotal.toFixed(3));
+        totalColumnas[totalColumnas.length - 1] = totalColumnas[totalColumnas.length - 1] + parseFloat(filaActual.find("td:last").text());
+    });
+    $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:last td:gt(0):lt(14)').each(function (index) {
+        $(this).text(totalColumnas[index].toFixed(3));
     });
 }
 
