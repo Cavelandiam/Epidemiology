@@ -1,7 +1,38 @@
 ﻿$(document).ready(function () {
     manageTabMenus();
     validateOnlyNumbers();
+    $("input[type='number']").on("change", function () {
+        calcularTiempoDensidadPruebasTbl8();
+    });
+    
 });
+
+function calcularTiempoDensidadPruebasTbl8() {
+    var fila1Valores = [];
+    $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:first-child td:gt(0):lt(11)').each(function () {
+        fila1Valores.push($(this).find('input').val());
+    });
+    $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:gt(0):lt(5)').each(function () {
+        var filaActual = $(this);
+        var initialCell = filaActual.find("td:gt(0) input").val();
+        filaActual.find("td:gt(1):lt(11)").each(function (index) {
+            if ($(this).text() != '') {
+                $(this).text((initialCell / fila1Valores[index]).toFixed(3));
+            } 
+
+        });
+    });
+    $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:gt(4):lt(13)').each(function () {
+        var filaActual = $(this);
+        var initialCell = filaActual.find("td:gt(0) input").val();
+        filaActual.find("td:gt(1):lt(11)").each(function () {
+            if ($(this).text() != '') {
+                $(this).text((initialCell));
+            }
+
+        });
+    });
+}
 
 function manageTabMenus() {
     $('ul.tabs li a:first').addClass('active');
