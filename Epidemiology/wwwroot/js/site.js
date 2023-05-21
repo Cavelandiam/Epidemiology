@@ -2,12 +2,13 @@
     manageTabMenus();
     validateOnlyNumbers();
     $("input[type='number']").on("change", function () {
-        calcularTiempoDensidadPruebasTbl8();
+        calcularTiempoDensidadPruebasTbl8_1();
+        calcularTiempoDensidadPruebasTbl8_2()
     });
     
 });
 
-function calcularTiempoDensidadPruebasTbl8() {
+function calcularTiempoDensidadPruebasTbl8_1() {
     var fila1Valores = [];
     var totalColumnas = [0,0,0,0,0,0,0,0,0,0,0,0,0];
     $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:first-child td:gt(0):lt(11)').each(function () {
@@ -28,7 +29,7 @@ function calcularTiempoDensidadPruebasTbl8() {
             }
             cont++;
         });
-        filaActual.find("td:last").text(sumaTotal.toFixed(3));
+        filaActual.find("td:last").text(sumaTotal.toFixed(2));
         totalColumnas[totalColumnas.length - 1] = totalColumnas[totalColumnas.length - 1] + parseFloat(filaActual.find("td:last").text());
     });
     $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:gt(4):lt(9)').each(function () {
@@ -46,11 +47,69 @@ function calcularTiempoDensidadPruebasTbl8() {
             }
             cont++;
         });
-        filaActual.find("td:last").text(sumaTotal.toFixed(3));
+        filaActual.find("td:last").text(sumaTotal.toFixed(2));
         totalColumnas[totalColumnas.length - 1] = totalColumnas[totalColumnas.length - 1] + parseFloat(filaActual.find("td:last").text());
     });
     $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:last td:gt(0):lt(14)').each(function (index) {
-        $(this).text(totalColumnas[index].toFixed(3));
+        $(this).text(totalColumnas[index].toFixed(2));
+    });
+}
+
+function calcularTiempoDensidadPruebasTbl8_2() {
+    var fila1Valores = [];
+    var valoresTbl8_1 = [];
+    var totalColumnas = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:first td:gt(0):lt(9)').each(function (){
+        valoresTbl8_1.push(parseFloat($(this).find('input').val()));
+    });
+    var s = "";
+    $('#tbl8-tiempo-densidad-pruebas-2 tbody tr:first-child td:gt(0):lt(9)').each(function () {
+        fila1Valores.push($(this).find('input').val());
+    });
+    fila1Valores = valoresTbl8_1;
+    $('#tbl8-tiempo-densidad-pruebas-2 tbody tr:gt(0):lt(4)').each(function () {
+        var filaActual = $(this);
+        var initialCell = parseFloat(filaActual.find("td:gt(0) input").val());
+        totalColumnas[0] = totalColumnas[0] + parseFloat(initialCell);
+        cont = 1;
+        var sumaTotal = 0;
+        filaActual.find("td:gt(1):lt(9)").each(function (index) {
+            var dataValue = $(this).text();
+            if (dataValue != '') {
+                $(this).text((initialCell / parseFloat(fila1Valores[index])).toFixed(3));
+                sumaTotal += parseFloat($(this).text());
+                totalColumnas[cont] = totalColumnas[cont] + parseFloat($(this).text());
+            }
+            cont++;
+        });
+        filaActual.find("td:last").text(sumaTotal.toFixed(2));
+        totalColumnas[totalColumnas.length - 1] = totalColumnas[totalColumnas.length - 1] + parseFloat(filaActual.find("td:last").text());
+    });
+    $('#tbl8-tiempo-densidad-pruebas-2 tbody tr:gt(4):lt(9)').each(function () {
+        var filaActual = $(this);
+        var initialCell = parseFloat(filaActual.find("td:gt(0) input").val());
+        totalColumnas[0] = totalColumnas[0] + parseFloat(initialCell);
+        cont = 1;
+        var sumaTotal = 0;
+        filaActual.find("td:gt(1):lt(9)").each(function () {
+            var dataValue = $(this).text();
+            if (dataValue != '') {
+                $(this).text((initialCell));
+                sumaTotal += parseFloat($(this).text());
+                totalColumnas[cont] = totalColumnas[cont] + parseFloat($(this).text());
+            }
+            cont++;
+        });
+        filaActual.find("td:last").text(sumaTotal.toFixed(2));
+        totalColumnas[totalColumnas.length - 1] = totalColumnas[totalColumnas.length - 1] + parseFloat(filaActual.find("td:last").text());
+    });
+    $('#tbl8-tiempo-densidad-pruebas-2 tbody tr:gt(12):lt(14) td:gt(1):lt(8)').each(function (index) {
+        if ($(this).text() != '') {
+            totalColumnas[index + 1] = totalColumnas[index + 1] - parseFloat($(this).text())
+        }
+    });
+    $('#tbl8-tiempo-densidad-pruebas-2 tbody tr:last td:gt(0):lt(12)').each(function (index) {
+        $(this).text(totalColumnas[index].toFixed(2));
     });
 }
 
