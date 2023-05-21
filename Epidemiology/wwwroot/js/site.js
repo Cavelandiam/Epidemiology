@@ -3,7 +3,8 @@
     validateOnlyNumbers();
     $("input[type='number']").on("change", function () {
         calcularTiempoDensidadPruebasTbl8_1();
-        calcularTiempoDensidadPruebasTbl8_2()
+        calcularTiempoDensidadPruebasTbl8_2();
+        calcularMedioCultivoTbl5_1();
     });
     
 });
@@ -111,6 +112,28 @@ function calcularTiempoDensidadPruebasTbl8_2() {
     $('#tbl8-tiempo-densidad-pruebas-2 tbody tr:last td:gt(0):lt(12)').each(function (index) {
         $(this).text(totalColumnas[index].toFixed(2));
     });
+}
+
+function calcularMedioCultivoTbl5_1() {
+    var presentacionGr = [];
+    var gramosPorPrueba = [];
+    var rendimiento = [];
+    $('#tbl5-medio-cultivo-1 tbody tr:gt(0):lt(2) td:lt(11)').each(function () {
+        presentacionGr.push(parseFloat($(this).find('input').val()).toFixed(5));
+    });
+    $('#tbl5-medio-cultivo-1 tbody tr:gt(4):lt(6) td:lt(10)').each(function () {
+        gramosPorPrueba.push(parseFloat($(this).find('input').val()).toFixed(5));
+    });
+    $('#tbl5-medio-cultivo-1 tbody tr:gt(1):lt(3) td:lt(10)').each(function (index) {
+        var valorRendimiento = presentacionGr[index] / gramosPorPrueba[index];
+        $(this).text(valorRendimiento);
+        rendimiento.push(valorRendimiento);
+    });
+    $('#tbl5-medio-cultivo-1 tbody tr:gt(3):lt(5) td:lt(10').each(function (index) {
+        valorReactivoNecesarioXPresentacion = (presentacionGr[index] / rendimiento[index]) / presentacionGr[index];
+        $(this).text(valorReactivoNecesarioXPresentacion);
+    });
+    var s = "";
 }
 
 function manageTabMenus() {
