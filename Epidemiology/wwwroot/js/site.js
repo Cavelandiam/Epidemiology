@@ -5,9 +5,33 @@
         calcularTiempoDensidadPruebasTbl8_1();
         calcularTiempoDensidadPruebasTbl8_2();
         calcularMedioCultivoTbl5_1();
+        calcularMedioCultivoTbl5_2();
     });
     
 });
+
+function manageTabMenus() {
+    $('ul.tabs li a:first').addClass('active');
+    $('.secciones article').hide();
+    $('.secciones article:first').show();
+    $('ul.tabs li a').click(function () {
+        $('ul.tabs li a').removeClass('active');
+        $(this).addClass('active');
+        $('.secciones article').hide();
+        var activeTab = $(this).attr('href');
+        $(activeTab).show();
+        return false;
+    });
+}
+
+function validateOnlyNumbers() {
+    $("input[type='number']").on("change", function () {
+        let num = $(this).val();
+        if (!num.match(/^\d+/)) {
+            $(this).val(1);
+        }
+    });
+}
 
 function calcularTiempoDensidadPruebasTbl8_1() {
     var fila1Valores = [];
@@ -169,28 +193,67 @@ function calcularMedioCultivoTbl5_1() {
     var s = "";
 }
 
-function manageTabMenus() {
-    $('ul.tabs li a:first').addClass('active');
-    $('.secciones article').hide();
-    $('.secciones article:first').show();
-    $('ul.tabs li a').click(function () {
-        $('ul.tabs li a').removeClass('active');
-        $(this).addClass('active');
-        $('.secciones article').hide();
-        var activeTab = $(this).attr('href');
-        $(activeTab).show();
-        return false;
+function calcularMedioCultivoTbl5_2() {
+    var presentacionGr = [];
+    var gramosPorPrueba = [];
+    var rendimiento = [];
+    var valorCultivo = [];
+    var valorComercial = [];
+    var valorCajaTubo = [];
+    var valorCultivoTotal = 0;
+    var valorCajaTuboTotal = 0;
+    var totalValorTotalCultivo = 0; 
+    $('#tbl5-medio-cultivo-2 tbody tr:eq(1) td:lt(9)').each(function () {
+        presentacionGr.push(parseFloat($(this).find('input').val()).toFixed(3));
     });
-}
-
-function validateOnlyNumbers() {
-    $("input[type='number']").on("change", function () {
-        let num = $(this).val();
-        if (!num.match(/^\d+/)) {
-            $(this).val(1);
+    $('#tbl5-medio-cultivo-2 tbody tr:eq(5) td:lt(9)').each(function () {
+        gramosPorPrueba.push(parseFloat($(this).find('input').val()).toFixed(3));
+    });
+    $('#tbl5-medio-cultivo-2 tbody tr:eq(2) td:lt(9)').each(function (index) {
+        var valorRendimiento = (presentacionGr[index] / gramosPorPrueba[index]).toFixed(3);
+        $(this).text(valorRendimiento);
+        rendimiento.push(valorRendimiento);
+    });
+    $('#tbl5-medio-cultivo-2 tbody tr:eq(6) td:lt(9)').each(function () {
+        valorComercial.push(parseFloat($(this).find('input').val()).toFixed(3));
+    });
+    $('#tbl5-medio-cultivo-2 tbody tr:eq(9) td:lt(9)').each(function (index) {
+        valorValCultivo = ((gramosPorPrueba[index] * valorComercial[index]) / presentacionGr[index]).toFixed(0);
+        valorValCultivo = parseFloat(valorValCultivo);
+        if (index == 3) {
+            valorValCultivo = valorValCultivo / 100;
+        } else if (index == 5) {
+            valorValCultivo = valorValCultivo / 50;
+        }
+        $(this).text(valorValCultivo);
+        valorCultivo.push(valorValCultivo);
+        valorCultivoTotal += valorValCultivo;
+    });
+    $('#tbl5-medio-cultivo-2 tbody tr:eq(9) td:eq(9)').each(function () {
+        $(this).text(valorCultivoTotal);
+    });
+    $('#tbl5-medio-cultivo-2 tbody tr:eq(10) td:lt(10)').each(function (index) {
+        var valueValor = parseFloat($(this).find('input').val());
+        if (isNaN(valueValor)) {
+            valorCajaTubo.push(0)
+        } else {            
+            valorCajaTubo.push(valueValor);
+            valorCajaTuboTotal += valueValor;
         }
     });
+    $('#tbl5-medio-cultivo-2 tbody tr:eq(10) td:last').text(valorCajaTuboTotal);
+    $('#tbl5-medio-cultivo-2 tbody tr:eq(12) td:lt(9)').each(function (index) {
+        var valor = valorCultivo[index] + valorCajaTubo[index];
+        if (index == 1) {
+            valor = valor / parseFloat($('#tbl5-medio-cultivo-2 tbody tr:eq(13) td:eq(0)').find('input').val());            
+        }
+        $(this).text(valor);
+        totalValorTotalCultivo += valor;
+    });
+    $('#tbl5-medio-cultivo-2 tbody tr:eq(12) td:last').text(parseFloat(totalValorTotalCultivo).toFixed(0));
 }
+
+
 
 /*
 
