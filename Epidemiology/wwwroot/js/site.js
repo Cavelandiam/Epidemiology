@@ -118,21 +118,54 @@ function calcularMedioCultivoTbl5_1() {
     var presentacionGr = [];
     var gramosPorPrueba = [];
     var rendimiento = [];
-    $('#tbl5-medio-cultivo-1 tbody tr:gt(0):lt(2) td:lt(11)').each(function () {
-        presentacionGr.push(parseFloat($(this).find('input').val()).toFixed(5));
+    var valorCultivo = [];
+    var valorComercial = [];
+    var valorCajaTubo = []; 
+    var valorCultivoTotal = 0;
+    var valorCajaTuboTotal = 0;
+    $('#tbl5-medio-cultivo-1 tbody tr:eq(1) td:lt(11)').each(function () {
+        presentacionGr.push(parseFloat($(this).find('input').val()).toFixed(3));
     });
-    $('#tbl5-medio-cultivo-1 tbody tr:gt(4):lt(6) td:lt(10)').each(function () {
-        gramosPorPrueba.push(parseFloat($(this).find('input').val()).toFixed(5));
+    $('#tbl5-medio-cultivo-1 tbody tr:eq(5) td:lt(10)').each(function () {
+        gramosPorPrueba.push(parseFloat($(this).find('input').val()).toFixed(3));
     });
-    $('#tbl5-medio-cultivo-1 tbody tr:gt(1):lt(3) td:lt(10)').each(function (index) {
-        var valorRendimiento = presentacionGr[index] / gramosPorPrueba[index];
+    $('#tbl5-medio-cultivo-1 tbody tr:eq(2) td:lt(10)').each(function (index) {
+        var valorRendimiento = (presentacionGr[index] / gramosPorPrueba[index]).toFixed(3);
         $(this).text(valorRendimiento);
         rendimiento.push(valorRendimiento);
     });
-    $('#tbl5-medio-cultivo-1 tbody tr:gt(3):lt(5) td:lt(10').each(function (index) {
-        valorReactivoNecesarioXPresentacion = (presentacionGr[index] / rendimiento[index]) / presentacionGr[index];
+    $('#tbl5-medio-cultivo-1 tbody tr:eq(4) td:lt(10)').each(function (index) {
+        valorReactivoNecesarioXPresentacion = ((presentacionGr[index] / rendimiento[index]) / presentacionGr[index]).toFixed(2);
         $(this).text(valorReactivoNecesarioXPresentacion);
     });
+    $('#tbl5-medio-cultivo-1 tbody tr:eq(6) td:lt(10)').each(function () {
+        valorComercial.push(parseFloat($(this).find('input').val()).toFixed(3));
+    });
+    $('#tbl5-medio-cultivo-1 tbody tr:eq(9) td:lt(10)').each(function (index) {
+        valorValCultivo = ((gramosPorPrueba[index] * valorComercial[index]) / presentacionGr[index]).toFixed(0);
+        valorValCultivo = parseFloat(valorValCultivo);
+        $(this).text(valorValCultivo);
+        valorCultivo.push(valorValCultivo);
+        valorCultivoTotal += valorValCultivo;
+    });
+    valorCultivo.push(parseFloat($('#tbl5-medio-cultivo-1 tbody tr:eq(9) td:eq(10)').find('input').val()));
+    $('#tbl5-medio-cultivo-1 tbody tr:eq(9) td:eq(11)').each(function () {
+        $(this).text(valorCultivoTotal + parseFloat($('#tbl5-medio-cultivo-1 tbody tr:eq(9) td:eq(10)').find('input').val()));
+    });    
+    $('#tbl5-medio-cultivo-1 tbody tr:eq(10) td:lt(12)').each(function () {
+        var valueValor = parseFloat($(this).find('input').val());
+        if (isNaN(valueValor)) {
+            valorCajaTubo.push(0)
+        } else {
+            valorCajaTubo.push(valueValor);
+            valorCajaTuboTotal += valueValor;
+        }
+    });
+    $('#tbl5-medio-cultivo-1 tbody tr:eq(10) td:last').text(valorCajaTuboTotal);
+    $('#tbl5-medio-cultivo-1 tbody tr:eq(12) td:lt(11)').each(function (index) {
+        $(this).text(valorCultivo[index] + valorCajaTubo[index]);
+    });
+
     var s = "";
 }
 
