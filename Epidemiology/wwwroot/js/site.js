@@ -6,6 +6,7 @@
         calcularTiempoDensidadPruebasTbl8_2();
         calcularMedioCultivoTbl5_1();
         calcularMedioCultivoTbl5_2();
+        calcularMedioCultivoTbl5_3() 
     });
     
 });
@@ -245,15 +246,36 @@ function calcularMedioCultivoTbl5_2() {
     $('#tbl5-medio-cultivo-2 tbody tr:eq(12) td:lt(9)').each(function (index) {
         var valor = valorCultivo[index] + valorCajaTubo[index];
         if (index == 1) {
-            valor = valor / parseFloat($('#tbl5-medio-cultivo-2 tbody tr:eq(13) td:eq(0)').find('input').val());            
+            valor = valor / parseFloat($('#tbl5-medio-cultivo-2 tbody tr:eq(13) td:eq(0)').find('input').val());       
+            valor = parseFloat(valor.toFixed(0));
         }
         $(this).text(valor);
         totalValorTotalCultivo += valor;
     });
-    $('#tbl5-medio-cultivo-2 tbody tr:eq(12) td:last').text(parseFloat(totalValorTotalCultivo).toFixed(0));
+    $('#tbl5-medio-cultivo-2 tbody tr:eq(12) td:last').text(parseFloat(totalValorTotalCultivo.toFixed(0)));
 }
 
-
+function calcularMedioCultivoTbl5_3() {
+    var presentacionXKit = [];
+    var valorKit = [];
+    var valorPrueba = [];
+    var valorPrueba1 = 0;
+    var valorPrueba2 = 0;
+    $('#tbl5-medio-cultivo-3 tbody tr:eq(1) td:lt(5)').each(function () {
+        presentacionXKit.push(parseFloat($(this).find('input').val()));
+    });
+    $('#tbl5-medio-cultivo-3 tbody tr:eq(2) td:lt(5)').each(function () {
+        valorKit.push(parseFloat($(this).find('input').val()));
+    });
+    $('#tbl5-medio-cultivo-3 tbody tr:eq(3) td:lt(5)').each(function (index) {
+        var valorTest = valorKit[index] / presentacionXKit[index];
+        valorTest = parseFloat(valorTest.toFixed(0));
+        valorPrueba.push(valorTest);
+        $(this).text(valorTest);
+    });  
+    $('#tbl5-medio-cultivo-3 tbody tr:eq(4) td:eq(0)').text(valorPrueba[0] + valorPrueba[1]);
+    $('#tbl5-medio-cultivo-3 tbody tr:eq(4) td:eq(1)').text(valorPrueba[2] + valorPrueba[3]);
+}
 
 /*
 
