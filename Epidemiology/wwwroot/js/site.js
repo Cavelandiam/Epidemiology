@@ -9,8 +9,10 @@
         calcularMedioCultivoTbl5_3();
         calcularMedioCultivoTbl5_4();
         calcularActividadesCultivoTbl7_1();
+        calcularTalentoHumanoTbl6_3();
+        calcularTalentoHumanoTbl6_1();
     });
-    
+
 });
 
 function manageTabMenus() {
@@ -38,7 +40,7 @@ function validateOnlyNumbers() {
 
 function calcularTiempoDensidadPruebasTbl8_1() {
     var fila1Valores = [];
-    var totalColumnas = [0,0,0,0,0,0,0,0,0,0,0,0,0];
+    var totalColumnas = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:first-child td:gt(0):lt(11)').each(function () {
         fila1Valores.push($(this).find('input').val());
     });
@@ -53,7 +55,7 @@ function calcularTiempoDensidadPruebasTbl8_1() {
             if (dataValue != '') {
                 $(this).text((initialCell / parseFloat(fila1Valores[index])).toFixed(3));
                 sumaTotal += parseFloat($(this).text());
-                totalColumnas[cont] = totalColumnas[cont] + parseFloat($(this).text());                
+                totalColumnas[cont] = totalColumnas[cont] + parseFloat($(this).text());
             }
             cont++;
         });
@@ -71,7 +73,7 @@ function calcularTiempoDensidadPruebasTbl8_1() {
             if (dataValue != '') {
                 $(this).text((initialCell));
                 sumaTotal += parseFloat($(this).text());
-                totalColumnas[cont] = totalColumnas[cont] + parseFloat($(this).text());                
+                totalColumnas[cont] = totalColumnas[cont] + parseFloat($(this).text());
             }
             cont++;
         });
@@ -87,7 +89,7 @@ function calcularTiempoDensidadPruebasTbl8_2() {
     var fila1Valores = [];
     var valoresTbl8_1 = [];
     var totalColumnas = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-    $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:first td:gt(0):lt(9)').each(function (){
+    $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:first td:gt(0):lt(9)').each(function () {
         valoresTbl8_1.push(parseFloat($(this).find('input').val()));
     });
     var s = "";
@@ -147,7 +149,7 @@ function calcularMedioCultivoTbl5_1() {
     var rendimiento = [];
     var valorCultivo = [];
     var valorComercial = [];
-    var valorCajaTubo = []; 
+    var valorCajaTubo = [];
     var valorCultivoTotal = 0;
     var valorCajaTuboTotal = 0;
     $('#tbl5-medio-cultivo-1 tbody tr:eq(1) td:lt(11)').each(function () {
@@ -178,7 +180,7 @@ function calcularMedioCultivoTbl5_1() {
     valorCultivo.push(parseFloat($('#tbl5-medio-cultivo-1 tbody tr:eq(9) td:eq(10)').find('input').val()));
     $('#tbl5-medio-cultivo-1 tbody tr:eq(9) td:eq(11)').each(function () {
         $(this).text(valorCultivoTotal + parseFloat($('#tbl5-medio-cultivo-1 tbody tr:eq(9) td:eq(10)').find('input').val()));
-    });    
+    });
     $('#tbl5-medio-cultivo-1 tbody tr:eq(10) td:lt(12)').each(function () {
         var valueValor = parseFloat($(this).find('input').val());
         if (isNaN(valueValor)) {
@@ -205,7 +207,7 @@ function calcularMedioCultivoTbl5_2() {
     var valorCajaTubo = [];
     var valorCultivoTotal = 0;
     var valorCajaTuboTotal = 0;
-    var totalValorTotalCultivo = 0; 
+    var totalValorTotalCultivo = 0;
     $('#tbl5-medio-cultivo-2 tbody tr:eq(1) td:lt(9)').each(function () {
         presentacionGr.push(parseFloat($(this).find('input').val()).toFixed(3));
     });
@@ -239,7 +241,7 @@ function calcularMedioCultivoTbl5_2() {
         var valueValor = parseFloat($(this).find('input').val());
         if (isNaN(valueValor)) {
             valorCajaTubo.push(0)
-        } else {            
+        } else {
             valorCajaTubo.push(valueValor);
             valorCajaTuboTotal += valueValor;
         }
@@ -248,7 +250,7 @@ function calcularMedioCultivoTbl5_2() {
     $('#tbl5-medio-cultivo-2 tbody tr:eq(12) td:lt(9)').each(function (index) {
         var valor = valorCultivo[index] + valorCajaTubo[index];
         if (index == 1) {
-            valor = valor / parseFloat($('#tbl5-medio-cultivo-2 tbody tr:eq(13) td:eq(0)').find('input').val());       
+            valor = valor / parseFloat($('#tbl5-medio-cultivo-2 tbody tr:eq(13) td:eq(0)').find('input').val());
             valor = parseFloat(valor.toFixed(0));
         }
         $(this).text(valor);
@@ -272,7 +274,7 @@ function calcularMedioCultivoTbl5_3() {
         valorTest = parseFloat(valorTest.toFixed(0));
         valorPrueba.push(valorTest);
         $(this).text(valorTest);
-    });  
+    });
     $('#tbl5-medio-cultivo-3 tbody tr:eq(4) td:eq(0)').text(valorPrueba[0] + valorPrueba[1]);
     $('#tbl5-medio-cultivo-3 tbody tr:eq(4) td:eq(1)').text(valorPrueba[2] + valorPrueba[3]);
 }
@@ -306,7 +308,7 @@ function calcularActividadesCultivoTbl7_1() {
     $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:gt(0):lt(13) ').each(function (index) {
         var totalFound = parseFloat($(this).find('td:eq(13)').text());
         totalTiempoDensidadPruebas1 += totalFound;
-        $('#tbl7-info-actividades-cultivo-1 tbody tr:eq(' + (index + 1)+') td:eq(1)').text(totalFound);
+        $('#tbl7-info-actividades-cultivo-1 tbody tr:eq(' + (index + 1) + ') td:eq(1)').text(totalFound);
     });
     $('#tbl8-tiempo-densidad-pruebas-2 tbody tr:gt(0):lt(13) ').each(function (index) {
         var totalFound = parseFloat($(this).find('td:eq(11)').text());
@@ -325,15 +327,34 @@ function calcularActividadesCultivoTbl7_1() {
     var s = "";
 }
 
-/*
+function calcularTalentoHumanoTbl6_3() {
+    $('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(0) td:eq(1)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(0) td:eq(0) input').val()) / 30).toFixed(0));
+    $('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(0) td:eq(3)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(0) td:eq(1) input').val()) / 30).toFixed(0));
 
-tbl1-info-cultivo-convencional-1,2,3,4
-tbl2-info-cultivo-pcr-1,2,3,4
-tbl3-descr-cultivo-convencional-1
-tbl4-descr-cultivo-pcr-1
-tbl5-medio-cultivo-1,2,3,4
-tbl6-info-talento-humano-cultivo-1,2,3
-tbl7-info-actividades-cultivo-1
-tbl8-tiempo-densidad-pruebas-1,2
+    $('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(3) td:eq(1)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(4) td:eq(0) input').val()) / 30).toFixed(0));
+    $('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(3) td:eq(3)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(4) td:eq(1) input').val()) / 30).toFixed(0));
 
-*/
+    $('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(2) td:eq(1)').text(parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(0) input').val())
+        + parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(0) input').val()));
+    $('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(5) td:eq(1)').text(parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(0) input').val())
+        + parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(0) input').val()));
+    
+    $('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(2) td:eq(3)').text(parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(0) input').val())
+        + parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(0) input').val()));
+    $('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(5) td:eq(3)').text(parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(0) input').val())
+        + parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(0) input').val()));
+}
+
+function calcularTalentoHumanoTbl6_1() {
+    var leadTime1 = 0;
+    var leadTime2 = 0;
+    $('#tbl7-info-actividades-cultivo-1 tbody tr:gt(4):lt(9)').each(function (index) {
+        if(index != 2)
+            leadTime1 += parseFloat($(this).find('td:eq(1)').text());
+    });
+    $('#tbl7-info-actividades-cultivo-1 tbody tr:lt(5)').each(function () {
+        leadTime2 += parseFloat($(this).find('td:eq(3)').find('input').val());
+    });
+    $('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(1) td:eq(0)').text(leadTime1);
+    $('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(1) td:eq(1)').text(leadTime2);
+}
