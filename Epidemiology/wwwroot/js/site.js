@@ -8,6 +8,7 @@
         calcularMedioCultivoTbl5_2();
         calcularMedioCultivoTbl5_3();
         calcularMedioCultivoTbl5_4();
+        calcularActividadesCultivoTbl7_1();
     });
     
 });
@@ -294,6 +295,34 @@ function calcularMedioCultivoTbl5_4() {
     });
     $('#tbl5-medio-cultivo-4 tbody tr:eq(4) td:eq(0)').text(valorPrueba[0] + valorPrueba[1]);
     $('#tbl5-medio-cultivo-4 tbody tr:eq(4) td:eq(1)').text(valorPrueba[2] + valorPrueba[3]);
+}
+
+function calcularActividadesCultivoTbl7_1() {
+    var totalTiempoDensidadPruebas1 = 0;
+    var totalTiempoDensidadPruebas2 = 0;
+    var alistamientoMaterialesPreparacion1 = 0;
+    var alistamientoMaterialesPreparacion2 = 0;
+    var total1 = 0;
+    $('#tbl8-tiempo-densidad-pruebas-1 tbody tr:gt(0):lt(13) ').each(function (index) {
+        var totalFound = parseFloat($(this).find('td:eq(13)').text());
+        totalTiempoDensidadPruebas1 += totalFound;
+        $('#tbl7-info-actividades-cultivo-1 tbody tr:eq(' + (index + 1)+') td:eq(1)').text(totalFound);
+    });
+    $('#tbl8-tiempo-densidad-pruebas-2 tbody tr:gt(0):lt(13) ').each(function (index) {
+        var totalFound = parseFloat($(this).find('td:eq(11)').text());
+        totalTiempoDensidadPruebas2 += totalFound;
+        $('#tbl7-info-actividades-cultivo-1 tbody tr:eq(' + (index + 17) + ') td:eq(1)').text(totalFound);
+    });
+    alistamientoMaterialesPreparacion1 = $('#tbl7-info-actividades-cultivo-1 tbody tr:eq(0) td:eq(1)').find('input').val();
+    alistamientoMaterialesPreparacion2 = $('#tbl7-info-actividades-cultivo-1 tbody tr:eq(16) td:eq(1)').find('input').val();
+    $('#tbl7-info-actividades-cultivo-1 tbody tr:eq(14) td:eq(1)').text(totalTiempoDensidadPruebas1 + parseFloat(alistamientoMaterialesPreparacion1));
+    $('#tbl7-info-actividades-cultivo-1 tbody tr:eq(30) td:eq(1)').text(totalTiempoDensidadPruebas2 + parseFloat(alistamientoMaterialesPreparacion2));
+    $('#tbl7-info-actividades-cultivo-1 tbody tr:lt(5)').each(function () {
+        var obj = $(this).find('td:eq(3)').find('input').val();
+        total1 += parseFloat(obj);
+    });
+    $('#tbl7-info-actividades-cultivo-1 tbody tr:eq(5) td:eq(3)').text(total1);
+    var s = "";
 }
 
 /*
