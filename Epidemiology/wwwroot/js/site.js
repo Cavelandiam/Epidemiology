@@ -11,6 +11,7 @@
         calcularActividadesCultivoTbl7_1();
         calcularTalentoHumanoTbl6_3();
         calcularTalentoHumanoTbl6_1();
+        calcularTalentoHumanoTbl6_2();
     });
 
 });
@@ -348,6 +349,7 @@ function calcularTalentoHumanoTbl6_3() {
 function calcularTalentoHumanoTbl6_1() {
     var leadTime1 = 0;
     var leadTime2 = 0;
+    var leadTimeAux = 0;
     $('#tbl7-info-actividades-cultivo-1 tbody tr:gt(4):lt(9)').each(function (index) {
         if(index != 2)
             leadTime1 += parseFloat($(this).find('td:eq(1)').text());
@@ -356,5 +358,74 @@ function calcularTalentoHumanoTbl6_1() {
         leadTime2 += parseFloat($(this).find('td:eq(3)').find('input').val());
     });
     $('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(1) td:eq(0)').text(leadTime1);
+    $('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(1) td:eq(0)').text(leadTime1);
     $('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(1) td:eq(1)').text(leadTime2);
+
+
+    $('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(2) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(0) td:eq(1)').text())
+        / parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(1) td:eq(1)').find('input').val())).toFixed(0));
+    $('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(2) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(0) td:eq(1)').text())
+        / parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(1) td:eq(1)').find('input').val())).toFixed(0));
+    $('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(2) td:eq(1)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(0) td:eq(3)').text())
+        / parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(1) td:eq(3)').find('input').val())).toFixed(0));
+
+    $('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(3) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(2) td:eq(0)').text())
+        * parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(1) td:eq(0)').text()));
+    $('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(3) td:eq(1)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(2) td:eq(0)').text())
+        * parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(1) td:eq(0)').text()));
+
+
+    $('#tbl7-info-actividades-cultivo-1 tbody tr:lt(5)').each(function (index) {
+        if (index == 0)
+            leadTimeAux += parseFloat($(this).find('td:eq(1) input').val());
+        else
+            leadTimeAux += parseFloat($(this).find('td:eq(1)').text())
+    });
+    $('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(5) td:eq(0)').text(leadTimeAux);
+    $('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(5) td:eq(1)').text(parseFloat($('#tbl7-info-actividades-cultivo-1 tbody tr:eq(0) td:eq(3) input').val()));
+
+    $('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(6) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(3) td:eq(1)').text())
+        / parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(4) td:eq(1)').find('input').val())).toFixed(0));
+    $('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(6) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(3) td:eq(1)').text())
+        / parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(4) td:eq(1)').find('input').val())).toFixed(0));
+    $('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(6) td:eq(1)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(3) td:eq(3)').text())
+        / parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(4) td:eq(3)').find('input').val())).toFixed(0));
+
+    $('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(7) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(6) td:eq(0)').text())
+        * parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(5) td:eq(0)').text()));
+    $('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(7) td:eq(1)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(6) td:eq(0)').text())
+        * parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(5) td:eq(0)').text()));
+}
+
+function calcularTalentoHumanoTbl6_2() {
+    var leadTime1 = 0;    
+    var leadTimeAux = 0;
+    $('#tbl7-info-actividades-cultivo-1 tbody tr:gt(15):lt(5)').each(function () {
+        leadTime1 += parseFloat($(this).find('td:eq(3)').find('input').val());
+    });
+    $('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(1) td:eq(1)').text(leadTime1);
+    $('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(2) td:eq(1)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(0) td:eq(3)').text())
+        / parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(1) td:eq(3)').find('input').val())).toFixed(0));
+
+    $('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(3) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(2) td:eq(0)').text())
+        * parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(1) td:eq(0)').text()));
+    $('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(3) td:eq(1)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(2) td:eq(0)').text())
+        * parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(1) td:eq(0)').text()));
+
+    $('#tbl7-info-actividades-cultivo-1 tbody tr:lt(7)').each(function (index) {
+        if (index == 0)
+            leadTimeAux += parseFloat($(this).find('td:eq(1) input').val());
+        else if (index != 5)
+            leadTimeAux += parseFloat($(this).find('td:eq(1)').text());
+    });
+    $('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(5) td:eq(0)').text(leadTimeAux);
+    $('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(5) td:eq(1)').text(parseFloat($('#tbl7-info-actividades-cultivo-1 tbody tr:eq(16) td:eq(3) input').val()));
+
+    $('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(6) td:eq(1)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(3) td:eq(3)').text())
+        / parseFloat($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(4) td:eq(3)').find('input').val())).toFixed(0));
+
+    $('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(7) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(6) td:eq(0)').text())
+        * parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(5) td:eq(0)').text()));
+    $('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(7) td:eq(1)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(6) td:eq(0)').text())
+        * parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(5) td:eq(0)').text()));
 }
