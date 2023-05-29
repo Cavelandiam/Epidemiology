@@ -435,9 +435,13 @@ function calcularTalentoHumanoTbl6_2() {
 function calcularTalentoHumanoTbl1_1() {
     var cultivoListeria = $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(0) input ').val();
     var cultivoSalmonela = $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(0) input ').val();
+    var valorTotalDesperdicio = 0;
 
     $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(1)').text($('#tbl5-medio-cultivo-2 tbody tr:eq(12) td:eq(9)').text());
     $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(1)').text($('#tbl5-medio-cultivo-1 tbody tr:eq(12) td:eq(11)').text());
+
+    $('#tbl1-info-cultivo-convencional-4 tbody tr:eq(0) td:eq(2)').text($('#tbl5-medio-cultivo-2 tbody tr:eq(12) td:eq(9)').text());
+    $('#tbl1-info-cultivo-convencional-4 tbody tr:eq(1) td:eq(1)').text($('#tbl5-medio-cultivo-1 tbody tr:eq(12) td:eq(11)').text());
 
     $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(2)').text(parseFloat(cultivoListeria) * parseFloat($('#tbl5-medio-cultivo-2 tbody tr:eq(12) td:eq(9)').text()));
     $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(2)').text(parseFloat(cultivoSalmonela) * parseFloat($('#tbl5-medio-cultivo-1 tbody tr:eq(12) td:eq(11)').text()));
@@ -457,4 +461,14 @@ function calcularTalentoHumanoTbl1_1() {
         $(this).text(parseFloat($('#tbl1-info-cultivo-convencional-2 tbody tr:eq(0) td:eq(' + index + ')').text())
             - parseFloat($('#tbl1-info-cultivo-convencional-2 tbody tr:eq(2) td:eq(' + index + ')').text()));
     });
+
+    $('#tbl1-info-cultivo-convencional-4 tbody tr:eq(0) td:eq(1)').text((cultivoListeria * parseFloat($('#tbl5-medio-cultivo-1 tbody tr:eq(8) td:eq(0)').text())) / 100);
+    $('#tbl1-info-cultivo-convencional-4 tbody tr:eq(1) td:eq(0)').text((cultivoSalmonela * parseFloat($('#tbl5-medio-cultivo-1 tbody tr:eq(8) td:eq(0)').text())) / 100);
+
+    $('#tbl1-info-cultivo-convencional-4 tbody tr:eq(0) td:eq(3)').text(parseFloat($('#tbl1-info-cultivo-convencional-4 tbody tr:eq(0) td:eq(2)').text())
+        * parseFloat($('#tbl1-info-cultivo-convencional-4 tbody tr:eq(0) td:eq(1)').text()));
+    $('#tbl1-info-cultivo-convencional-4 tbody tr:eq(1) td:eq(2)').text(parseFloat($('#tbl1-info-cultivo-convencional-4 tbody tr:eq(1) td:eq(1)').text())
+        * parseFloat($('#tbl1-info-cultivo-convencional-4 tbody tr:eq(1) td:eq(0)').text()));
+    $('#tbl1-info-cultivo-convencional-4 tbody tr:eq(2) td:last').text(parseFloat($('#tbl1-info-cultivo-convencional-4 tbody tr:eq(0) td:eq(3)').text())
+        + parseFloat($('#tbl1-info-cultivo-convencional-4 tbody tr:eq(1) td:eq(2)').text()));
 }
