@@ -16,6 +16,8 @@
         calcularCultivoConvencionalTbl1_3();
         calcularCultivoPcrTbl2_1();
         calcularCultivoPcrTbl2_3();
+        calcularDescrCultivoConvencionalTbl3_1();
+        calcularDescrCultivopcrTbl4_1();
     });
 
 });
@@ -588,4 +590,74 @@ function calcularCultivoPcrTbl2_3() {
     $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(3)').text(parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(2)').text()) * precioCultivoSalmonella);
     $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(2)').text(cultivoSalmonela - parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(2)').text()));
     $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(3)').text(precioCultivoSalmonella * parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(2)').text()));
+}
+
+function calcularDescrCultivoConvencionalTbl3_1() {
+    var total1 = 0;
+    var total2 = 0;
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(0) td:eq(0)').text((parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(2)').text())
+        / parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(0)').text())).toFixed(0));
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(1) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(3) td:eq(0)').text()));
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(2) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(7) td:eq(0)').text()));
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:lt(3) td').each(function () {
+        total1 += parseFloat($(this).text());
+    });
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(3) td:eq(0)').text(total1);
+
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(4) td:eq(0)').text((parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(2)').text())
+        / parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(0)').text())).toFixed(0));
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(5) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(3) td:eq(0)').text()));
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(6) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(7) td:eq(0)').text()));
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:gt(3):lt(3) td').each(function () {
+        total2 += parseFloat($(this).text());
+    });
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(7) td:eq(0)').text(total2);
+}
+
+function calcularDescrCultivopcrTbl4_1() {
+    var total1 = 0;
+    var total2 = 0;
+    var total3 = 0;
+    var total4 = 0;
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(0) td:eq(0)').text((parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(2)').text())
+        / parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(0)').text())).toFixed(0));
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(1) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(3) td:eq(1)').text()));
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(2) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(7) td:eq(1)').text()));
+    total1 = parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(0) td:eq(0)').text())
+        + parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(1) td:eq(0)').text()) + parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(2) td:eq(0)').text());
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(3) td:eq(0)').text(total1);
+
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(6) td:eq(0)').text((parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(2)').text())
+        / parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(0)').text())).toFixed(0));
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(7) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(3) td:eq(1)').text()));
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(8) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(7) td:eq(1)').text()));
+    total2 = parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(6) td:eq(0)').text())
+        + parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(7) td:eq(0)').text()) + parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(8) td:eq(0)').text());
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(9) td:eq(0)').text(total2);
+
+
+
+
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(0) td:eq(1)').text((parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(5)').text())
+        / parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(2)').text())).toFixed(0));
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(1) td:eq(1)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(2) td:eq(1)').text())
+        * parseFloat($('#tbl7-info-actividades-cultivo-1 tbody tr:eq(6) td:eq(3) input').val()));
+
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(2) td:eq(1)').text(0);
+    total3 = parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(0) td:eq(1)').text())
+        + parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(1) td:eq(1)').text()) + parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(2) td:eq(1)').text());
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(3) td:eq(1)').text(total3);
+
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(6) td:eq(1)').text(parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(5)').text())
+        / parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(2)').text()));
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(7) td:eq(1)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(2) td:eq(1)').text())
+        * parseFloat($('#tbl7-info-actividades-cultivo-1 tbody tr:eq(22) td:eq(3) input').val()));
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(8) td:eq(1)').text(0);
+    total4 = parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(6) td:eq(1)').text())
+        + parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(7) td:eq(1)').text()) + parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(8) td:eq(1)').text());
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(9) td:eq(1)').text(total4);
+
+
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(4) td:eq(0)').text(parseFloat(total1) + parseFloat(total3));
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(10) td:eq(0)').text(parseFloat(total2) + parseFloat(total4));   
 }
