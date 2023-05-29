@@ -12,6 +12,7 @@
         calcularTalentoHumanoTbl6_3();
         calcularTalentoHumanoTbl6_1();
         calcularTalentoHumanoTbl6_2();
+        calcularTalentoHumanoTbl1_1();
     });
 
 });
@@ -153,6 +154,7 @@ function calcularMedioCultivoTbl5_1() {
     var valorCajaTubo = [];
     var valorCultivoTotal = 0;
     var valorCajaTuboTotal = 0;
+    var valorTotal = 0;
     $('#tbl5-medio-cultivo-1 tbody tr:eq(1) td:lt(11)').each(function () {
         presentacionGr.push(parseFloat($(this).find('input').val()).toFixed(3));
     });
@@ -193,10 +195,10 @@ function calcularMedioCultivoTbl5_1() {
     });
     $('#tbl5-medio-cultivo-1 tbody tr:eq(10) td:last').text(valorCajaTuboTotal);
     $('#tbl5-medio-cultivo-1 tbody tr:eq(12) td:lt(11)').each(function (index) {
+        valorTotal += valorCultivo[index] + valorCajaTubo[index];
         $(this).text(valorCultivo[index] + valorCajaTubo[index]);
     });
-
-    var s = "";
+    $('#tbl5-medio-cultivo-1 tbody tr:eq(12) td:eq(11)').text(valorTotal);
 }
 
 function calcularMedioCultivoTbl5_2() {
@@ -339,7 +341,7 @@ function calcularTalentoHumanoTbl6_3() {
         + parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(0) input').val()));
     $('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(5) td:eq(1)').text(parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(0) input').val())
         + parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(0) input').val()));
-    
+
     $('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(2) td:eq(3)').text(parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(0) input').val())
         + parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(0) input').val()));
     $('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(5) td:eq(3)').text(parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(0) input').val())
@@ -351,7 +353,7 @@ function calcularTalentoHumanoTbl6_1() {
     var leadTime2 = 0;
     var leadTimeAux = 0;
     $('#tbl7-info-actividades-cultivo-1 tbody tr:gt(4):lt(9)').each(function (index) {
-        if(index != 2)
+        if (index != 2)
             leadTime1 += parseFloat($(this).find('td:eq(1)').text());
     });
     $('#tbl7-info-actividades-cultivo-1 tbody tr:lt(5)').each(function () {
@@ -398,7 +400,7 @@ function calcularTalentoHumanoTbl6_1() {
 }
 
 function calcularTalentoHumanoTbl6_2() {
-    var leadTime1 = 0;    
+    var leadTime1 = 0;
     var leadTimeAux = 0;
     $('#tbl7-info-actividades-cultivo-1 tbody tr:gt(15):lt(5)').each(function () {
         leadTime1 += parseFloat($(this).find('td:eq(3)').find('input').val());
@@ -428,4 +430,31 @@ function calcularTalentoHumanoTbl6_2() {
         * parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(5) td:eq(0)').text()));
     $('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(7) td:eq(1)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(6) td:eq(0)').text())
         * parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(5) td:eq(0)').text()));
+}
+
+function calcularTalentoHumanoTbl1_1() {
+    var cultivoListeria = $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(0) input ').val();
+    var cultivoSalmonela = $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(0) input ').val();
+
+    $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(1)').text($('#tbl5-medio-cultivo-2 tbody tr:eq(12) td:eq(9)').text());
+    $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(1)').text($('#tbl5-medio-cultivo-1 tbody tr:eq(12) td:eq(11)').text());
+
+    $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(2)').text(parseFloat(cultivoListeria) * parseFloat($('#tbl5-medio-cultivo-2 tbody tr:eq(12) td:eq(9)').text()));
+    $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(2)').text(parseFloat(cultivoSalmonela) * parseFloat($('#tbl5-medio-cultivo-1 tbody tr:eq(12) td:eq(11)').text()));
+
+    $('#tbl1-info-cultivo-convencional-2 tbody tr:eq(0) td:eq(0)').text($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(1) td:eq(1) input').val());
+    $('#tbl1-info-cultivo-convencional-2 tbody tr:eq(0) td:eq(1)').text($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(4) td:eq(1) input').val());
+    $('#tbl1-info-cultivo-convencional-2 tbody tr:eq(0) td:eq(2)').text($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(1) td:eq(1) input').val());
+    $('#tbl1-info-cultivo-convencional-2 tbody tr:eq(0) td:eq(3)').text($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(4) td:eq(1) input').val());
+
+    $('#tbl1-info-cultivo-convencional-2 tbody tr:eq(2) td:eq(0)').text(((parseFloat(cultivoListeria) / 30) * parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(1) td:eq(0)').text())).toFixed(0));
+    $('#tbl1-info-cultivo-convencional-2 tbody tr:eq(2) td:eq(1)').text(((parseFloat(cultivoListeria) / 30) * parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(5) td:eq(0)').text())).toFixed(0));
+    $('#tbl1-info-cultivo-convencional-2 tbody tr:eq(2) td:eq(2)').text(((parseFloat(cultivoSalmonela) / 30) * parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(1) td:eq(0)').text())).toFixed(0));
+    $('#tbl1-info-cultivo-convencional-2 tbody tr:eq(2) td:eq(3)').text(((parseFloat(cultivoSalmonela) / 30) * parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(5) td:eq(0)').text())).toFixed(0));
+
+
+    $('#tbl1-info-cultivo-convencional-2 tbody tr:eq(1) td').each(function (index) {
+        $(this).text(parseFloat($('#tbl1-info-cultivo-convencional-2 tbody tr:eq(0) td:eq(' + index + ')').text())
+            - parseFloat($('#tbl1-info-cultivo-convencional-2 tbody tr:eq(2) td:eq(' + index + ')').text()));
+    });
 }
