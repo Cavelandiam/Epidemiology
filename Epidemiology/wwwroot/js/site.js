@@ -13,7 +13,9 @@
         calcularTalentoHumanoTbl6_1();
         calcularTalentoHumanoTbl6_2();
         calcularCultivoConvencionalTbl1_1();
+        calcularCultivoConvencionalTbl1_3();
         calcularCultivoPcrTbl2_1();
+        calcularCultivoPcrTbl2_3();
     });
 
 });
@@ -473,6 +475,26 @@ function calcularCultivoConvencionalTbl1_1() {
         + parseFloat($('#tbl1-info-cultivo-convencional-4 tbody tr:eq(1) td:eq(2)').text()));
 }
 
+function calcularCultivoConvencionalTbl1_3() {
+    var cultivoListeria = parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(0) input ').val());
+    var cultivoSalmonela = parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(0) input ').val());
+    var porcContaminacionTeorica = parseFloat($('#tbl5-medio-cultivo-2 tbody tr:eq(7) td:eq(0)').text());
+    var volumenMuertoPrepListeria = parseFloat($('#tbl1-info-cultivo-convencional-4 tbody tr:eq(0) td:eq(1)').text());
+    var volumenMuertoPrepSalmonella = parseFloat($('#tbl1-info-cultivo-convencional-4 tbody tr:eq(1) td:eq(1)').text());
+    var precioCultivoListeria = parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(1)').text());
+    var precioCultivoSalmonella = parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(1)').text());
+
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(0)').text(cultivoListeria - (cultivoListeria * porcContaminacionTeorica / 100) - volumenMuertoPrepListeria);
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(1)').text(parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(0)').text()) * precioCultivoListeria);
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(1) td:eq(0)').text(cultivoListeria - parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(0)').text()));
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(1) td:eq(1)').text(precioCultivoListeria * parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(1) td:eq(0)').text()));
+
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(0)').text(cultivoSalmonela - (cultivoSalmonela * porcContaminacionTeorica / 100) - volumenMuertoPrepSalmonella);
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(1)').text(parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(0)').text()) * precioCultivoSalmonella);
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(3) td:eq(0)').text(cultivoSalmonela - parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(0)').text()));
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(3) td:eq(1)').text(precioCultivoSalmonella * parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(3) td:eq(0)').text()));
+}
+
 function calcularCultivoPcrTbl2_1() {
     var cultivoListeria = $('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(0) input ').val();
     var cultivoSalmonela = $('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(0) input ').val();
@@ -530,4 +552,8 @@ function calcularCultivoPcrTbl2_1() {
         * parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(3)').text()));
     $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(2) td:last').text(parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(6)').text())
         + parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(5)').text()));
+}
+
+function calcularCultivoPcrTbl2_3() {
+
 }
