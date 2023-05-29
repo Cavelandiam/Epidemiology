@@ -12,7 +12,8 @@
         calcularTalentoHumanoTbl6_3();
         calcularTalentoHumanoTbl6_1();
         calcularTalentoHumanoTbl6_2();
-        calcularTalentoHumanoTbl1_1();
+        calcularCultivoConvencionalTbl1_1();
+        calcularCultivoPcrTbl2_1();
     });
 
 });
@@ -432,10 +433,9 @@ function calcularTalentoHumanoTbl6_2() {
         * parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(5) td:eq(0)').text()));
 }
 
-function calcularTalentoHumanoTbl1_1() {
+function calcularCultivoConvencionalTbl1_1() {
     var cultivoListeria = $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(0) input ').val();
     var cultivoSalmonela = $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(0) input ').val();
-    var valorTotalDesperdicio = 0;
 
     $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(1)').text($('#tbl5-medio-cultivo-2 tbody tr:eq(12) td:eq(9)').text());
     $('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(1)').text($('#tbl5-medio-cultivo-1 tbody tr:eq(12) td:eq(11)').text());
@@ -471,4 +471,63 @@ function calcularTalentoHumanoTbl1_1() {
         * parseFloat($('#tbl1-info-cultivo-convencional-4 tbody tr:eq(1) td:eq(0)').text()));
     $('#tbl1-info-cultivo-convencional-4 tbody tr:eq(2) td:last').text(parseFloat($('#tbl1-info-cultivo-convencional-4 tbody tr:eq(0) td:eq(3)').text())
         + parseFloat($('#tbl1-info-cultivo-convencional-4 tbody tr:eq(1) td:eq(2)').text()));
+}
+
+function calcularCultivoPcrTbl2_1() {
+    var cultivoListeria = $('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(0) input ').val();
+    var cultivoSalmonela = $('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(0) input ').val();
+    var cultivoListeria2 = $('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(3) input ').val();
+    var cultivoSalmonela2 = $('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(3) input ').val();
+
+    $('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(1)').text($('#tbl5-medio-cultivo-4 tbody tr:eq(4) td:eq(0)').text());
+    $('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(1)').text($('#tbl5-medio-cultivo-4 tbody tr:eq(4) td:eq(1)').text());
+
+    $('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(4)').text($('#tbl5-medio-cultivo-3 tbody tr:eq(4) td:eq(0)').text());
+    $('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(4)').text($('#tbl5-medio-cultivo-3 tbody tr:eq(4) td:eq(1)').text());
+
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(2)').text($('#tbl5-medio-cultivo-4 tbody tr:eq(4) td:eq(0)').text());
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(1)').text($('#tbl5-medio-cultivo-4 tbody tr:eq(4) td:eq(1)').text());
+
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(5)').text($('#tbl5-medio-cultivo-3 tbody tr:eq(4) td:eq(0)').text());
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(4)').text($('#tbl5-medio-cultivo-3 tbody tr:eq(4) td:eq(1)').text());
+
+    $('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(2)').text(parseFloat(cultivoListeria) * parseFloat($('#tbl5-medio-cultivo-4 tbody tr:eq(4) td:eq(0)').text()));
+    $('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(2)').text(parseFloat(cultivoSalmonela) * parseFloat($('#tbl5-medio-cultivo-4 tbody tr:eq(4) td:eq(1)').text()));
+
+    $('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(5)').text(parseFloat(cultivoListeria2) * parseFloat($('#tbl5-medio-cultivo-3 tbody tr:eq(4) td:eq(0)').text()));
+    $('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(5)').text(parseFloat(cultivoSalmonela2) * parseFloat($('#tbl5-medio-cultivo-3 tbody tr:eq(4) td:eq(1)').text()));
+
+    $('#tbl2-info-cultivo-pcr-2 tbody tr:eq(0) td:eq(0)').text($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(1) td:eq(3) input').val());
+    $('#tbl2-info-cultivo-pcr-2 tbody tr:eq(0) td:eq(1)').text($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(4) td:eq(3) input').val());
+    $('#tbl2-info-cultivo-pcr-2 tbody tr:eq(0) td:eq(2)').text($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(1) td:eq(3) input').val());
+    $('#tbl2-info-cultivo-pcr-2 tbody tr:eq(0) td:eq(3)').text($('#tbl6-info-talento-humano-cultivo-3 tbody tr:eq(4) td:eq(3) input').val());
+
+    $('#tbl2-info-cultivo-pcr-2 tbody tr:eq(2) td:eq(0)').text(((parseFloat(cultivoListeria) / 30) * parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(1) td:eq(1)').text())).toFixed(0));
+    $('#tbl2-info-cultivo-pcr-2 tbody tr:eq(2) td:eq(1)').text(((parseFloat(cultivoListeria) / 30) * parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(5) td:eq(1)').text())).toFixed(0));
+    $('#tbl2-info-cultivo-pcr-2 tbody tr:eq(2) td:eq(2)').text(((parseFloat(cultivoSalmonela) / 30) * parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(1) td:eq(1)').text())).toFixed(0));
+    $('#tbl2-info-cultivo-pcr-2 tbody tr:eq(2) td:eq(3)').text(((parseFloat(cultivoSalmonela) / 30) * parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(5) td:eq(1)').text())).toFixed(0));
+
+    $('#tbl2-info-cultivo-pcr-2 tbody tr:eq(1) td').each(function (index) {
+        $(this).text(parseFloat($('#tbl2-info-cultivo-pcr-2 tbody tr:eq(0) td:eq(' + index + ')').text())
+            - parseFloat($('#tbl2-info-cultivo-pcr-2 tbody tr:eq(2) td:eq(' + index + ')').text()));
+    });
+
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(1)').text((cultivoListeria * 1) / 100);
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(0)').text((cultivoSalmonela * 1) / 100);
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(4)').text((cultivoListeria2 * 1) / 100);
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(3)').text((cultivoSalmonela2 * 1) / 100);
+
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(3)').text(parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(2)').text())
+        * parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(1)').text()));
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(2)').text(parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(1)').text())
+        * parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(0)').text()));
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(2) td:eq(2)').text(parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(3)').text())
+        + parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(2)').text()));
+
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(6)').text(parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(5)').text())
+        * parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(4)').text()));
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(5)').text(parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(4)').text())
+        * parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(3)').text()));
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(2) td:last').text(parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(6)').text())
+        + parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(5)').text()));
 }
