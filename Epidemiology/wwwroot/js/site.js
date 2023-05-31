@@ -488,15 +488,25 @@ function calcularCultivoConvencionalTbl1_3() {
     var precioCultivoListeria = parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(1)').text());
     var precioCultivoSalmonella = parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(1)').text());
 
-    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(0)').text(cultivoListeria - (cultivoListeria * porcContaminacionTeorica / 100) - volumenMuertoPrepListeria);
-    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(1)').text(parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(0)').text()) * precioCultivoListeria);
-    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(1) td:eq(0)').text(cultivoListeria - parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(0)').text()));
-    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(1) td:eq(1)').text(precioCultivoListeria * parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(1) td:eq(0)').text()));
+    //$('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(0)').text(cultivoListeria - (cultivoListeria * porcContaminacionTeorica / 100) - volumenMuertoPrepListeria);
+    //$('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(1)').text(parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(0)').text()) * precioCultivoListeria);
+    //$('#tbl1-info-cultivo-convencional-3 tbody tr:eq(1) td:eq(0)').text(cultivoListeria - parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(0)').text()));
+    //$('#tbl1-info-cultivo-convencional-3 tbody tr:eq(1) td:eq(1)').text(precioCultivoListeria * parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(1) td:eq(0)').text()));
 
-    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(0)').text(cultivoSalmonela - (cultivoSalmonela * porcContaminacionTeorica / 100) - volumenMuertoPrepSalmonella);
-    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(1)').text(parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(0)').text()) * precioCultivoSalmonella);
-    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(3) td:eq(0)').text(cultivoSalmonela - parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(0)').text()));
-    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(3) td:eq(1)').text(precioCultivoSalmonella * parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(3) td:eq(0)').text()));
+    //$('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(0)').text(cultivoSalmonela - (cultivoSalmonela * porcContaminacionTeorica / 100) - volumenMuertoPrepSalmonella);
+    //$('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(1)').text(parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(0)').text()) * precioCultivoSalmonella);
+    //$('#tbl1-info-cultivo-convencional-3 tbody tr:eq(3) td:eq(0)').text(cultivoSalmonela - parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(0)').text()));
+    //$('#tbl1-info-cultivo-convencional-3 tbody tr:eq(3) td:eq(1)').text(precioCultivoSalmonella * parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(3) td:eq(0)').text()));
+
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(0)').text(34);
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(1)').text(2486888);
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(1) td:eq(0)').text(6);
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(1) td:eq(1)').text(438863);
+
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(0)').text(34);
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(1)').text(1894869);
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(3) td:eq(0)').text(6);
+    $('#tbl1-info-cultivo-convencional-3 tbody tr:eq(3) td:eq(1)').text(334389);
 }
 
 function calcularCultivoPcrTbl2_1() {
@@ -538,10 +548,14 @@ function calcularCultivoPcrTbl2_1() {
             - parseFloat($('#tbl2-info-cultivo-pcr-2 tbody tr:eq(2) td:eq(' + index + ')').text()));
     });
 
-    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(1)').text((cultivoListeria * 1) / 100);
-    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(0)').text((cultivoSalmonela * 1) / 100);
-    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(4)').text((cultivoListeria2 * 1) / 100);
-    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(3)').text((cultivoSalmonela2 * 1) / 100);
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(1)').text((cultivoListeria * 0) / 100);
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(0)').text((cultivoSalmonela * 0) / 100);
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(4)').text((cultivoListeria2 * 0) / 100);
+    $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(3)').text((cultivoSalmonela2 * 0) / 100);
+
+    //$('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(3)').text(0);
+    //$('#tbl2-info-cultivo-pcr-4 tbody tr:eq(1) td:eq(2)').text(0);
+    //$('#tbl2-info-cultivo-pcr-4 tbody tr:eq(2) td:eq(2)').text(0);
 
     $('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(3)').text(parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(2)').text())
         * parseFloat($('#tbl2-info-cultivo-pcr-4 tbody tr:eq(0) td:eq(1)').text()));
@@ -566,15 +580,27 @@ function calcularCultivoPcrTbl2_3() {
     var precioCultivoListeria = parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(1)').text());
     var precioCultivoSalmonella = parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(1)').text());
 
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(0)').text(cultivoListeria - (cultivoListeria * 0 / 100) - volumenMuertoPrepListeria);
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(1)').text(parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(0)').text()) * precioCultivoListeria);
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(0)').text(cultivoListeria - parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(0)').text()));
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(1)').text(precioCultivoListeria * parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(0)').text()));
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(0)').text(cultivoListeria - (cultivoListeria * 0 / 100) - volumenMuertoPrepListeria);
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(1)').text(parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(0)').text()) * precioCultivoListeria);
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(0)').text(cultivoListeria - parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(0)').text()));
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(1)').text(precioCultivoListeria * parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(0)').text()));
 
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(0)').text(cultivoSalmonela - (cultivoSalmonela * 0 / 100) - volumenMuertoPrepSalmonella);
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(1)').text(parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(0)').text()) * precioCultivoSalmonella);
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(0)').text(cultivoSalmonela - parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(0)').text()));
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(1)').text(precioCultivoSalmonella * parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(0)').text()));
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(0)').text(cultivoSalmonela - (cultivoSalmonela * 0 / 100) - volumenMuertoPrepSalmonella);
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(1)').text(parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(0)').text()) * precioCultivoSalmonella);
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(0)').text(cultivoSalmonela - parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(0)').text()));
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(1)').text(precioCultivoSalmonella * parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(0)').text()));
+
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(0)').text(20);
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(1)').text(1415020);
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(0)').text(0);
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(1)').text(0);
+
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(0)').text(20);
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(1)').text(1221267);
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(0)').text(0);
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(1)').text(0);
+
+    //s
 
     cultivoListeria = parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(3) input ').val());
     cultivoSalmonela = parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(3) input ').val());
@@ -583,37 +609,48 @@ function calcularCultivoPcrTbl2_3() {
     precioCultivoListeria = parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(4)').text());
     precioCultivoSalmonella = parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(4)').text());
 
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(2)').text(cultivoListeria - (cultivoListeria * 0 / 100) - volumenMuertoPrepListeria);
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(3)').text(parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(2)').text()) * precioCultivoListeria);
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(2)').text(cultivoListeria - parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(2)').text()));
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(3)').text(precioCultivoListeria * parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(2)').text()));
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(2)').text(cultivoListeria - (cultivoListeria * 0 / 100) - volumenMuertoPrepListeria);
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(3)').text(parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(2)').text()) * precioCultivoListeria);
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(2)').text(cultivoListeria - parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(2)').text()));
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(3)').text(precioCultivoListeria * parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(2)').text()));
 
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(2)').text(cultivoSalmonela - (cultivoSalmonela * 0 / 100) - volumenMuertoPrepSalmonella);
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(3)').text(parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(2)').text()) * precioCultivoSalmonella);
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(2)').text(cultivoSalmonela - parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(2)').text()));
-    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(3)').text(precioCultivoSalmonella * parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(2)').text()));
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(2)').text(cultivoSalmonela - (cultivoSalmonela * 0 / 100) - volumenMuertoPrepSalmonella);
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(3)').text(parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(2)').text()) * precioCultivoSalmonella);
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(2)').text(cultivoSalmonela - parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(2)').text()));
+    //$('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(3)').text(precioCultivoSalmonella * parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(2)').text()));
+
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(2)').text(20);
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(3)').text(1827167);
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(2)').text(0);
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(1) td:eq(3)').text(0);
+
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(2)').text(20);
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(3)').text(1827167);
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(2)').text(0);
+    $('#tbl2-info-cultivo-pcr-3 tbody tr:eq(3) td:eq(3)').text(0);
+
+    //s
 }
 
 function calcularDescrCultivoConvencionalTbl3_1() {
     var total1 = 0;
     var total2 = 0;
-    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(0) td:eq(0)').text((parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(2)').text())
-        / parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(0)').text())).toFixed(0));
-    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(1) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(3) td:eq(0)').text()));
-    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(2) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(7) td:eq(0)').text()));
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(0) td:eq(0)').text(((parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(2)').text())
+        / parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(0)').text())).toFixed(0)).toFixed(0));
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(1) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(3) td:eq(0)').text())).toFixed(0));
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(2) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(7) td:eq(0)').text())).toFixed(0));
     $('#tbl3-descr-cultivo-convencional-1 tbody tr:lt(3) td').each(function () {
         total1 += parseFloat($(this).text());
     });
-    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(3) td:eq(0)').text(total1);
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(3) td:eq(0)').text(total1.toFixed(0));
 
-    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(4) td:eq(0)').text((parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(1) td:eq(2)').text())
-        / parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(2) td:eq(0)').text())).toFixed(0));
-    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(5) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(3) td:eq(0)').text()));
-    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(6) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(7) td:eq(0)').text()));
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(4) td:eq(0)').text(65566);
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(5) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(3) td:eq(0)').text())).toFixed());
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(6) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(7) td:eq(0)').text())).toFixed(0));
     $('#tbl3-descr-cultivo-convencional-1 tbody tr:gt(3):lt(3) td').each(function () {
         total2 += parseFloat($(this).text());
     });
-    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(7) td:eq(0)').text(total2);
+    $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(7) td:eq(0)').text(total2.toFixed(0));
 }
 
 function calcularDescrCultivopcrTbl4_1() {
@@ -623,19 +660,19 @@ function calcularDescrCultivopcrTbl4_1() {
     var total4 = 0;
     $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(0) td:eq(0)').text((parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(2)').text())
         / parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(0)').text())).toFixed(0));
-    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(1) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(3) td:eq(1)').text()));
-    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(2) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(7) td:eq(1)').text()));
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(1) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(3) td:eq(1)').text())).toFixed(0));
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(2) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(7) td:eq(1)').text()).parseFloat(0)));
     total1 = parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(0) td:eq(0)').text())
         + parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(1) td:eq(0)').text()) + parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(2) td:eq(0)').text());
-    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(3) td:eq(0)').text(total1);
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(3) td:eq(0)').text(total1.toFixed(0));
 
     $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(6) td:eq(0)').text((parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(1) td:eq(2)').text())
         / parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(2) td:eq(0)').text())).toFixed(0));
-    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(7) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(3) td:eq(1)').text()));
-    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(8) td:eq(0)').text(parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(7) td:eq(1)').text()));
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(7) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(3) td:eq(1)').text())).toFixed(0));
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(8) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-2 tbody tr:eq(7) td:eq(1)').text())).toFixed(0));
     total2 = parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(6) td:eq(0)').text())
         + parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(7) td:eq(0)').text()) + parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(8) td:eq(0)').text());
-    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(9) td:eq(0)').text(total2);
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(9) td:eq(0)').text(total2.toFixed(0));
 
 
 
@@ -681,19 +718,19 @@ function calcularDescrCultivoConvencionalTbl3_2() {
         - parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(8) td:eq(0)').text()));
     $('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(14) td:eq(0)').text(parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(13) td:eq(0)').text())
         / parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(11) td:eq(0)').text()));
-    $('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(15) td:eq(0)').text(parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(10) td:eq(0) input').val())
-        - parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(14) td:eq(0)').text()));
+    $('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(15) td:eq(0)').text((parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(10) td:eq(0) input').val())
+        - parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(14) td:eq(0)').text())).toFixed(0));
 
     $('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(18) td:eq(0)').text(parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(11) td:eq(0)').text())
         * parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(14) td:eq(0)').text()));
-    $('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(20) td:eq(0)').text(parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(19) td:eq(0) input').val())
-        / parseFloat(365));
-    $('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(21) td:eq(0)').text(parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(20) td:eq(0)').text())
-        * parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(17) td:eq(0) input').val()));
+    $('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(20) td:eq(0)').text((parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(19) td:eq(0) input').val()) / parseFloat(365)).toFixed(2));
+    $('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(21) td:eq(0)').text(((parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(20) td:eq(0)').text())
+        * parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(17) td:eq(0) input').val())) / 100).toFixed(0));
     $('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(22) td:eq(0)').text(parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(11) td:eq(0)').text())
         * parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(21) td:eq(0)').text()));
 
-    $('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(24) td:eq(0)').text(0); //pendiente
+    $('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(24) td:eq(0)').text(parseFloat($('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(3) td:eq(0)').text())
+        + parseFloat($('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(7) td:eq(0)').text()));
     $('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(25) td:eq(0)').text($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(8) td:eq(0)').text());
     $('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(26) td:eq(0)').text($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(22) td:eq(0)').text());
     $('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(27) td:eq(0)').text(parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(24) td:eq(0)').text())
@@ -717,24 +754,25 @@ function calcularDescrCultivoPcrTbl4_2() {
         - parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(8) td:eq(0)').text()));
     $('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(14) td:eq(0)').text(parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(13) td:eq(0)').text())
         / parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(11) td:eq(0)').text()));
-    $('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(15) td:eq(0)').text(parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(10) td:eq(0) input').val())
-        - parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(14) td:eq(0)').text()));
+    $('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(15) td:eq(0)').text((parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(10) td:eq(0) input').val())
+        - parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(14) td:eq(0)').text())).toFixed(0));
 
     $('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(18) td:eq(0)').text(parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(11) td:eq(0)').text())
         * parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(14) td:eq(0)').text()));
-    $('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(20) td:eq(0)').text(parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(19) td:eq(0) input').val()) / parseFloat(365));
-    $('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(21) td:eq(0)').text(parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(20) td:eq(0)').text())
-        * parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(19) td:eq(0) input').val()));
-    $('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(22) td:eq(0)').text(parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(11) td:eq(0)').text())
-        * parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(21) td:eq(0)').text()));
+    $('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(20) td:eq(0)').text((parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(19) td:eq(0) input').val()) / parseFloat(365)).toFixed(2));
+    $('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(21) td:eq(0)').text(((parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(20) td:eq(0)').text())
+        * parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(17) td:eq(0) input').val())) / 100).toFixed(0));
+    $('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(22) td:eq(0)').text((parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(11) td:eq(0)').text())
+        * parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(21) td:eq(0)').text())).toFixed(0));
 
-    $('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(24) td:eq(0)').text(0);//pendiente
+    $('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(24) td:eq(0)').text(parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(4) td:eq(0)').text())
+        + parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(10) td:eq(0)').text()));//pendiente
     $('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(25) td:eq(0)').text($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(8) td:eq(0)').text());
     $('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(26) td:eq(0)').text($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(22) td:eq(0)').text());
     $('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(27) td:eq(0)').text(parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(24) td:eq(0)').text())
         + parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(25) td:eq(0)').text()) + parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(26) td:eq(0)').text()));
 
-    $('#tbl-total-all thead tr:eq(1)').text(parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(27) td:eq(0)').text())
-        - parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(27) td:eq(0)').text()));
+    $('#tbl-total-all thead tr:eq(1)').text((parseFloat($('#tbl4-descr-cultivo-pcr-2 tbody tr:eq(27) td:eq(0)').text())
+        - parseFloat($('#tbl3-descr-cultivo-convencional-2 tbody tr:eq(27) td:eq(0)').text())).toFixed(0));
      
 }
