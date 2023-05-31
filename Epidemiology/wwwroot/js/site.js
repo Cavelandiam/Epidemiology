@@ -636,7 +636,7 @@ function calcularDescrCultivoConvencionalTbl3_1() {
     var total1 = 0;
     var total2 = 0;
     $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(0) td:eq(0)').text(((parseFloat($('#tbl1-info-cultivo-convencional-1 tbody tr:eq(0) td:eq(2)').text())
-        / parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(0)').text())).toFixed(0)).toFixed(0));
+        / parseFloat($('#tbl1-info-cultivo-convencional-3 tbody tr:eq(0) td:eq(0)').text())).toFixed(0)));
     $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(1) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(3) td:eq(0)').text())).toFixed(0));
     $('#tbl3-descr-cultivo-convencional-1 tbody tr:eq(2) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(7) td:eq(0)').text())).toFixed(0));
     $('#tbl3-descr-cultivo-convencional-1 tbody tr:lt(3) td').each(function () {
@@ -661,7 +661,7 @@ function calcularDescrCultivopcrTbl4_1() {
     $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(0) td:eq(0)').text((parseFloat($('#tbl2-info-cultivo-pcr-1 tbody tr:eq(0) td:eq(2)').text())
         / parseFloat($('#tbl2-info-cultivo-pcr-3 tbody tr:eq(0) td:eq(0)').text())).toFixed(0));
     $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(1) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(3) td:eq(1)').text())).toFixed(0));
-    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(2) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(7) td:eq(1)').text()).parseFloat(0)));
+    $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(2) td:eq(0)').text((parseFloat($('#tbl6-info-talento-humano-cultivo-1 tbody tr:eq(7) td:eq(1)').text()).toFixed(0)));
     total1 = parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(0) td:eq(0)').text())
         + parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(1) td:eq(0)').text()) + parseFloat($('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(2) td:eq(0)').text());
     $('#tbl4-descr-cultivo-pcr-1 tbody tr:eq(3) td:eq(0)').text(total1.toFixed(0));
